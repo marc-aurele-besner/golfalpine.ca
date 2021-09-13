@@ -1,0 +1,8 @@
+{
+    "name": "GolfAlpine",
+    "description": "GolfAlpine",
+    "version": "1.0",
+    "url": "http://www.golfalpine.ca",
+    "start_url": ".",
+    "display": "standalone"
+}
