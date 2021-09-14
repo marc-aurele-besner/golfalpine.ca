@@ -11,7 +11,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@types/react-datepicker": "^4.1.7",
+    "date-fns": "^2.23.0",
     "emailjs-com": "^3.2.0",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
@@ -27,6 +27,7 @@
     "@types/lodash": "^4.14.172",
     "@types/node": "^16.9.0",
     "@types/react": "^17.0.20",
+    "@types/react-datepicker": "^4.1.7",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
     "@types/styled-components": "^5.1.14",

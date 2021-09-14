@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com'
-import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker'
+import ReactDatePicker, { ReactDatePickerProps, registerLocale } from 'react-datepicker'
+import fr from "date-fns/locale/fr"
 import { getFormErrors } from './helpers'
 
 import 'react-datepicker/dist/react-datepicker.css'
+
+registerLocale("fr", fr)
 
 export interface FormState {
     startDate: Date;
@@ -173,7 +176,7 @@ const Accueil: React.FC = () => {
                         />} 
                         portalId="reactDatePicker" 
                         dateFormat="PPP" 
-                        locale={locale}
+                        locale="fr"
                         name="startDate"
                         onChange={handleDateChange('startDate')}
                         selected={startDate}
