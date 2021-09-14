@@ -15,6 +15,16 @@ const Video: React.FC = () => {
             loop={true} 
             width="100%" 
             height="100%"
+            style={{  
+                padding: 0,
+                paddingTop: 130,
+                left: 0,
+                zIndex: -1,
+                maxHeight: "100%",
+                maxWidth: "100%",
+                objectFit: "cover",
+                objectPosition: "center"
+            }}
         />
     )
 }

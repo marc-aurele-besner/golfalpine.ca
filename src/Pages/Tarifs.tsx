@@ -6,8 +6,7 @@ const Tarifs: React.FC = () => {
   return (
     <>
     <Helmet>
-      <title>Hello World</title>
-      <link rel="canonical" href="https://www.tacobell.com/" />
+      <title>Golf Alpine - Nos tarifs</title>
     </Helmet>
     <div className="container" id='about'>
       <StyledCard>
@@ -141,12 +140,13 @@ const StyledCard = styled.div`
   height: 850px;
   @media only screen and (max-width: 600px) {
     height: 1400px;
+    padding-top: 4vh;
   }
   float: center;
   margin: 0.5vw;
-  padding: 20px;
+  padding: 1vw;
+  padding-top: 2vw;
   color: #000000;
-  padding: 0.5vw;
   position: relative;
 `;
 
@@ -158,15 +158,15 @@ const StyledTarrifType = styled.div`
     width: 100%;
   }
   height: 100%;
-  margin: 20px;
+  margin: 0.5vw;
   padding: 0.5vw;
   color: #000000;
-  padding: 0.5vw;
   position: relative;
 
   &:hover {
-    background-color: #E2E2E2;
-    border-radius: 10px;
+    border: 2px solid #34773A;
+    background: linear-gradient(139.73deg, #D3F4D1 0%, #8BD087 100%);
+    border-radius: 25px;
   }
 `;
 

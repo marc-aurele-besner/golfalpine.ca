@@ -15,6 +15,11 @@ export interface FormState {
     type: number;
 }
 
+interface Locale {
+  localize: any;
+  formatLong: any;
+}
+
 const FormError: React.FC = ({ children }) => (
     <Errors>
       {children}
@@ -38,6 +43,50 @@ const initialState: FormState = {
     telephone: '',
     ppl: 0,
     type: 9,
+}
+
+const months: any = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
+const days: any = ['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pz']
+
+const locale: Locale  = {
+  localize: {
+    month: n => months[n],
+    day: n => days[n]
+  },
+  formatLong: {}
+}
+
+const GolfSvg = () => {
+  return (
+    <GolfSvgContainer>
+      <Svg viewBox="0 0 512 512" width="24" height="24">
+      <path
+          d="M132.413 20.833c71.945-67.796 143.89 55.526 215.835 10.682a8.827 8.827 0 0113.682 7.326v128a8.823 8.823 0 01-3.001 6.709c-75.476 65.678-151.04-73.798-226.516-2.648V20.833z"
+          fill="#E64C3C"
+        />
+        <path
+          d="M384 313.291c-98.693-8.298-200.387-7.415-293.165 27.277C55.79 353.722 1.942 379.586 0 417.81c-2.296 48.64 67.53 67.707 109.373 77.065a765.456 765.456 0 00203.035 16.066 918.064 918.064 0 00155.454-22.246c19.95-5.738 54.378-16.242 37.605-41.136a71.597 71.597 0 00-31.514-21.981c-22.246-9.622-84.657-26.483-80.067-56.585 3.267-21.451 44.138-14.3 44.845-35.31.794-18.008-30.367-18.273-54.731-20.392z"
+          fill="#71C285"
+        />
+        <path
+          d="M132.413 432.552c19.501 0 35.31-9.881 35.31-22.069 0-12.188-15.809-22.069-35.31-22.069-19.501 0-35.31 9.881-35.31 22.069 0 12.188 15.809 22.069 35.31 22.069z"
+          fill="#4C8056"
+        />
+        <path
+          d="M132.414 414.896a8.827 8.827 0 01-8.828-8.827V20.833a8.827 8.827 0 1117.655 0v385.236a8.827 8.827 0 01-8.827 8.827z"
+          fill="#ECF0F1"
+        />
+        <path
+          d="M353.103 459.034c14.626 0 26.483-11.856 26.483-26.482s-11.857-26.483-26.483-26.483c-14.626 0-26.483 11.857-26.483 26.483 0 14.626 11.857 26.482 26.483 26.482z"
+          fill="#F5EFCA"
+        />
+        <path
+          d="M123.586 300.668h17.655v52.965h-17.655v-52.965zM123.586 194.737h17.655v52.965h-17.655v-52.965zM123.586 88.806h17.655v52.965h-17.655V88.806z"
+          fill="#C03A2B"
+        />
+      </Svg>
+    </GolfSvgContainer>
+  )
 }
 
 const Accueil: React.FC = () => {
@@ -104,7 +153,7 @@ const Accueil: React.FC = () => {
   return (
     <>
         <StyledReservationCard>
-            <h3><b>Reservation</b></h3>
+            <h3><GolfSvg /><b>Reservation</b></h3>
 
             {send && (
                 <Box>
@@ -124,6 +173,7 @@ const Accueil: React.FC = () => {
                         />} 
                         portalId="reactDatePicker" 
                         dateFormat="PPP" 
+                        locale={locale}
                         name="startDate"
                         onChange={handleDateChange('startDate')}
                         selected={startDate}
@@ -147,6 +197,7 @@ const Accueil: React.FC = () => {
                         portalId="reactDatePicker" 
                         timeCaption="Time"
                         dateFormat="ppp" 
+                        locale="fr"
                         name="startTime"
                         onChange={handleDateChange('startTime')}
                         selected={startTime}
@@ -161,7 +212,6 @@ const Accueil: React.FC = () => {
                     <Input 
                         type="text" 
                         name="name" 
-                        id="name" 
                         value={name} 
                         required
                         onChange={handleChange}
@@ -177,7 +227,6 @@ const Accueil: React.FC = () => {
                             <Input 
                                 type="text" 
                                 name="telephone" 
-                                id="telephone"
                                 value={telephone} 
                                 required
                                 onChange={handleChange}
@@ -191,7 +240,6 @@ const Accueil: React.FC = () => {
                             <Input 
                                 type="text" 
                                 name="ppl" 
-                                id="ppl"
                                 value={ppl} 
                                 required
                                 onChange={handleChange}
@@ -207,7 +255,6 @@ const Accueil: React.FC = () => {
                                     <Radio 
                                         type="radio" 
                                         name="type" 
-                                        id="type" 
                                         value="9" 
                                         checked
                                         onChange={handleChange} 
@@ -220,7 +267,6 @@ const Accueil: React.FC = () => {
                                     <Radio 
                                         type="radio" 
                                         name="type" 
-                                        id="type" 
                                         value="18"
                                         onChange={handleChange} 
                                     />
@@ -258,7 +304,7 @@ const StyledReservationCard = styled.div`
   width: 90%;
   float: center;
   margin: 10px;
-  background: #C4E9C2;
+  background: linear-gradient(139.73deg, #C4E9C2 0%, #72B46F 100%);
   border-radius: 25px;
   border: 2px solid #34773A;
   padding: 10px;
@@ -269,7 +315,7 @@ const StyledReservationCard = styled.div`
 `;
 
 const BaseLabel = styled.label`
-  color: #34773A;
+  color: #1C4B21;
   display: block;
   font-size: 16px;
   font-weight: 600;
@@ -288,7 +334,7 @@ const TypeStyled = styled.div`
 `
 
 const RadioTextStyled = styled.div`
-    color: #34773A;
+    color: #1C4B21;
     float: left;
     padding: 5px;
     vertical-align: middle;
@@ -300,12 +346,22 @@ const Box = styled.div`
   width: 100%;
 `
 
+const GolfSvgContainer = styled.span`
+  padding-right: 0.5vw;
+  position: relative;
+`;
+
+const Svg = styled.svg`
+  align-self: center;
+  flex-shrink: 0;
+`;
+
 const Input = styled.input`
   background-color: #FFFFFF;
   border: 0;
   border-radius: 16px;
   box-shadow: 2px 2px #E4E4E4;
-  color: #34773A;
+  color: #1C4B21;
   display: block;
   font-size: 16px;
   height: 28px;
@@ -382,8 +438,10 @@ const Radio = styled.input.attrs({ type: "radio" })`
 const StyledButton = styled.button`
   align-items: center;
   border: 1;
+  margin-top: 2vh;
   border-radius: 16px;
-  box-shadow: 2px 2px #E4E4E4;
+  box-shadow: 2px 2px #1C4B21;
+  border: 1px solid #34773A;
   color: #34773A;
   cursor: pointer;
   display: inline-flex;

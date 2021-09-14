@@ -25,17 +25,16 @@ const StyledFooter = styled.div`
   width: 100%;
   float: center;
   text-align: left;
-  margin: 20px;
+  margin: 0.5vw;
   border-radius: 10px;
   color: #000000;
-  padding: 20px;
-  overflow: hidden;
-  position: relative;
+  padding: 0.5vw;
+  position: bottom;
 `;
 
 const StyledTextFooter = styled.div`
   width: 100%;
-  padding-left: 200px;
+  padding-left: 8vw;
   position: relative;
 `;
 
@@ -43,7 +42,7 @@ const StyledImgFooter = styled.img`
   width: 180px;
   float: left;
   text-align: left;
-  padding: 4px;
+  padding: 0.1vw;
   position: relative;
 `;
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Helmet } from 'react-helmet-async'
 
 const parcours = [
   {
@@ -105,55 +106,60 @@ const parcours = [
 
 const Parcours: React.FC = () => {
   return (
-    <div className="container" id='about'>
-      <StyledParcours>
-        <h2>
-          Le parcours
-        </h2>
-        {parcours.map((parcours: any) => (
-            <StyledCard>
-              <h3>
-                Trou {parcours.index}
-                <StyledNormal>Par {parcours.normal}</StyledNormal>
-              </h3>
-              <StyledBox>
-                <StyledBoxContent>
-                  <StyledImages src={`/img/fairway${parcours.index}.jpg`} alt={parcours.fairway} height="200px" />
-                </StyledBoxContent>
-                <StyledBoxContent>
-                  <Table>
-                    <thead>
-                      <tr>
-                        <th>Départ</th>
-                        <th>Distance</th>
-                      </tr>
-                    </thead>
-                      <tbody>
+    <>
+      <Helmet>
+        <title>Golf Alpine - Le parcours</title>
+      </Helmet>
+      <div className="container" id='about'>
+        <StyledParcours>
+          <h2>
+            Le parcours
+          </h2>
+          {parcours.map((parcours: any) => (
+              <StyledCard>
+                <h3>
+                  Trou {parcours.index}
+                  <StyledNormal>Par {parcours.normal}</StyledNormal>
+                </h3>
+                <StyledBox>
+                  <StyledBoxContent>
+                    <StyledImages src={`/img/fairway${parcours.index}.jpg`} alt={parcours.fairway} height="200px" />
+                  </StyledBoxContent>
+                  <StyledBoxContent>
+                    <Table>
+                      <thead>
                         <tr>
-                          <td>Bleu</td>
-                          <td>
-                            <Bleu>{parcours.startter.bleu}</Bleu></td>
+                          <th>Départ</th>
+                          <th>Distance</th>
                         </tr>
-                        <tr>
-                          <td>Blanc</td>
-                          <td><Blanc>{parcours.startter.blanc}</Blanc></td>
-                        </tr>
-                        <tr>
-                          <td>Or</td>
-                          <td><Or>{parcours.startter.or}</Or></td>
-                        </tr>
-                        <tr>
-                          <td>Rouge</td>
-                          <td><Rouge>{parcours.startter.rouge}</Rouge></td>
-                        </tr>
-                      </tbody>
-                    </Table>
-                </StyledBoxContent>
-              </StyledBox>
-            </StyledCard>
-        ))}
-      </StyledParcours>
-    </div>
+                      </thead>
+                        <tbody>
+                          <tr>
+                            <td>Bleu</td>
+                            <td>
+                              <Bleu>{parcours.startter.bleu}</Bleu></td>
+                          </tr>
+                          <tr>
+                            <td>Blanc</td>
+                            <td><Blanc>{parcours.startter.blanc}</Blanc></td>
+                          </tr>
+                          <tr>
+                            <td>Or</td>
+                            <td><Or>{parcours.startter.or}</Or></td>
+                          </tr>
+                          <tr>
+                            <td>Rouge</td>
+                            <td><Rouge>{parcours.startter.rouge}</Rouge></td>
+                          </tr>
+                        </tbody>
+                      </Table>
+                  </StyledBoxContent>
+                </StyledBox>
+              </StyledCard>
+          ))}
+        </StyledParcours>
+      </div>
+    </>
   )
 }
 
@@ -161,10 +167,13 @@ const StyledParcours = styled.div`
   border: 2px;
   width: 90%;
   float: center;
-  margin: 20px;
-  padding: 20px;
+  margin: 0.5vw;
+  padding: 1vw;
+  padding-top: 2vw;
+  @media only screen and (max-width: 600px) {
+    padding-top: 4vh;
+  }
   color: #000000;
-  padding: 10px;
   overflow: hidden;
   position: relative;
 `;
@@ -182,7 +191,8 @@ const StyledCard = styled.div`
   position: relative;
 
   &:hover {
-    background-color: #E2E2E2;
+    border: 2px solid #34773A;
+    background: linear-gradient(139.73deg, #C4E9C2 0%, #72B46F 100%);
     border-radius: 10px;
   }
 `;
@@ -239,18 +249,18 @@ const Rouge = styled.div`
 const Table = styled.table`
   max-width: 100%;
   width: 100%;
-  margin-right: 14px;
+  margin-right: 1vw;
 
   th,
   td {
     border-bottom: 1px solid #34773A;
     color: #000000;
-    padding: 16px;
+    padding: 2vh;
   }
 
   th {
     color: #34773A;
-    font-size: 3vh;
+    font-size: 1.5vh;
     text-transform: uppercase;
   }
 

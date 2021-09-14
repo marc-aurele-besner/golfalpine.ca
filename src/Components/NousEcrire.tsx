@@ -247,8 +247,10 @@ const Textarea = styled.textarea`
 const StyledButton = styled.button`
   align-items: center;
   border: 1;
+  margin-top: 2vh;
   border-radius: 16px;
-  box-shadow: 2px 2px #E4E4E4;
+  box-shadow: 2px 2px #1C4B21;
+  border: 1px solid #34773A;
   color: #34773A;
   cursor: pointer;
   display: inline-flex;
