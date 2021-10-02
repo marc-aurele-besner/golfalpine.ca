@@ -14,7 +14,7 @@ export const combineDateAndTime = (date: Date, time: Date) => {
 }
 
 export const getFormErrors = (formData: FormState) => {
-  const { startDate, startTime, name, telephone, ppl, type } = formData
+  const { startDate, startTime, name, telephone, email, ppl, type } = formData
   const errors: { [key: string]: string[] } = {}
 
   if (!name) {
@@ -23,6 +23,10 @@ export const getFormErrors = (formData: FormState) => {
 
   if (!telephone) {
     errors.telephone = ['Votre numéro de téléphone est requis']
+  }
+
+  if (!email) {
+    errors.email = ['Votre courriel est requis']
   }
 
   if (!ppl) {

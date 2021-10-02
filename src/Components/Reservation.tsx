@@ -14,6 +14,7 @@ export interface FormState {
     startTime: Date;
     name: string;
     telephone: string;
+    email: string;
     ppl: number;
     type: number;
 }
@@ -44,6 +45,7 @@ const initialState: FormState = {
     startTime: new Date(),
     name: '',
     telephone: '',
+    email: '',
     ppl: 0,
     type: 9,
 }
@@ -99,10 +101,11 @@ const Accueil: React.FC = () => {
         startTime: new Date(),
         name: '',
         telephone: '',
+        email: '',
         ppl: 0,
         type: 9,
         })
-  const { startDate, startTime, name, telephone, ppl, type } = state
+  const { startDate, startTime, name, telephone, email, ppl, type } = state
   const [fieldsState, setFieldsState] = useState<{ [key: string]: boolean }>({})
   const formErrors = getFormErrors(state)
 
@@ -115,6 +118,7 @@ const Accueil: React.FC = () => {
         startTime: new Date(),
         name: '',
         telephone: '',
+        email: '',
         ppl: 0,
         type: 9,
     })
@@ -235,6 +239,19 @@ const Accueil: React.FC = () => {
                                 onChange={handleChange}
                             />
                             {formErrors.telephone && fieldsState.telephone && <FormErrors errors={formErrors.telephone} />}
+                        </Box>
+                        <Box>
+                            <BaseLabel>Votre adresse courriel</BaseLabel>
+                        </Box>
+                        <Box>
+                            <Input 
+                                type="text" 
+                                name="email" 
+                                value={email} 
+                                required
+                                onChange={handleChange}
+                            />
+                            {formErrors.email && fieldsState.email && <FormErrors errors={formErrors.email} />}
                         </Box>
                         <Box>
                             <BaseLabel>Nombre de joueur</BaseLabel>
