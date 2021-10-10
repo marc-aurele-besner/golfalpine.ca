@@ -292,7 +292,7 @@ const Accueil: React.FC = () => {
                                     />
                                 </RadioTextStyled>
                                 <RadioTextStyled>
-                                    18 trous
+                                    18 trous (2 x 9 trous)
                                 </RadioTextStyled>
                             </TypeStyled>
                         </Box>
