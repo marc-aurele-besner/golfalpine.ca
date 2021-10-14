@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet-async'
 import Video from '../Components/Video'
-import Reservation from '../Components/Reservation'
+// import Reservation from '../Components/Reservation'
 
 const Accueil: React.FC = () => {
   return (
@@ -12,7 +12,10 @@ const Accueil: React.FC = () => {
     </Helmet>
       <Video />
       <div className="container">
-        <Reservation />
+        {/*<Reservation /> */}
+            <p>
+              La saison de golf 2021 est terminé.
+            </p>
         <StyledCardFrame>
           <StyledCard>
             <img src="/img/AfficheGolfeurResponsable_small.png" alt="COVID-19" width="100%" />
