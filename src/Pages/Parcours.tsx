@@ -115,18 +115,18 @@ const Parcours: React.FC = () => {
           <h2>
             Le parcours
           </h2>
-          {parcours.map((parcours: any) => (
-              <StyledCard>
+          {parcours.map((parcours: any, i) => (
+              <StyledCard key={`StyledCard-${i}`}>
                 <h3>
                   Trou {parcours.index}
-                  <StyledNormal>Par {parcours.normal}</StyledNormal>
+                  <StyledNormal key={`StyledNormal-${i}`}>Par {parcours.normal}</StyledNormal>
                 </h3>
-                <StyledBox>
-                  <StyledBoxContent>
-                    <StyledImages src={`/img/fairway${parcours.index}.jpg`} alt={parcours.fairway} height="200px" />
+                <StyledBox key={`StyledBox-${i}`}>
+                  <StyledBoxContent key={`StyledBoxContent-${i}`}>
+                    <StyledImages key={`StyledImages-${i}`} src={`/img/fairway${parcours.index}.jpg`} alt={parcours.fairway} height="200px" />
                   </StyledBoxContent>
-                  <StyledBoxContent>
-                    <Table>
+                  <StyledBoxContent key={`StyledBoxContentTable-${i}`}>
+                    <Table key={`Table-${i}`}>
                       <thead>
                         <tr>
                           <th>Départ</th>

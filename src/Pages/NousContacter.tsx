@@ -47,6 +47,7 @@ const NousContacter: React.FC = () => {
             </Table>
             <iframe 
               loading="lazy" 
+              title="Google Maps"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2548.4574746949884!2d-74.12500688095096!3d45.98604398541074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccf3852ea040003%3A0x689bad9137c0779e!2sClub+de+Golf+Alpine!5e1!3m2!1sfr!2sca!4v1401331349724" 
               width="100%" 
               height="300" 

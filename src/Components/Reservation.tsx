@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 import ReactDatePicker, { ReactDatePickerProps, registerLocale } from 'react-datepicker'
 import fr from "date-fns/locale/fr"
 import { getFormErrors } from './helpers'
