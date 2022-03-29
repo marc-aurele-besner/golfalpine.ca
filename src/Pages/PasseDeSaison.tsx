@@ -124,6 +124,7 @@ const StyledPassesType = styled.div`
   padding: 0.5vw;
   color: #000000;
   position: relative;
+  border: 2px solid #FFFFFF;
 
   &:hover {
     border: 2px solid #34773A;

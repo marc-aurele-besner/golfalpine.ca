@@ -35,13 +35,13 @@ const Tarifs: React.FC = () => {
                 <td>
                   <strong>Lundi au Vendredi</strong>
                 </td>
-                <td>$ 26.00</td>
-                <td>$ 38.00</td>
+                <td>$ 29.00</td>
+                <td>$ 42.00</td>
               </tr>
                 <tr>
                   <td><strong>Samedi et Dimanche</strong><br />Et jours fériés</td>
-                  <td>$ 28.00</td>
-                  <td>$ 40.00</td>
+                  <td>$ 31.00</td>
+                  <td>$ 44.00</td>
                 </tr>
               </tbody>
             </Table>
@@ -60,7 +60,7 @@ const Tarifs: React.FC = () => {
                   <td>
                     <strong>Lundi au Dimanche</strong><br />Avant 8 heures<br />Après 16 heures
                   </td>
-                  <td>$ 20.00</td>
+                  <td>$ 22.00</td>
                   <td> N/A</td>
                 </tr>
               </tbody>
@@ -88,13 +88,18 @@ const Tarifs: React.FC = () => {
               <tbody>
                 <tr>
                   <td><strong>Voiturette électrique</strong><br />1 personne<br />2 personnes</td>
-                  <td>$ 15.00<br />$ 20.00</td>
-                  <td>$ 20.00<br />$ 32.00</td>
+                  <td>$ 17.00<br />$ 22.00</td>
+                  <td>$ 22.00<br />$ 35.00</td>
                 </tr>
                 <tr>
                   <td><strong>Voiturette à main</strong></td>
-                  <td>$ 5.00</td>
-                  <td>$ 7.00</td>
+                  <td>$ 6.00</td>
+                  <td>$ 10.00</td>
+                </tr>
+                <tr>
+                  <td><strong>Location de bâtons de golf</strong></td>
+                  <td>$ 17.00</td>
+                  <td>$ 20.00</td>
                 </tr>
               </tbody>
             </Table>
@@ -113,15 +118,15 @@ const Tarifs: React.FC = () => {
                     <th>18 trous</th>
                   </tr>
                   <tr>
-                    <td>$ 225.00</td>
-                    <td>$ 330.00</td>
+                    <td>$ 245.00</td>
+                    <td>$ 355.00</td>
                     </tr>
                   <tr>
                     <td colSpan={2}><strong>Avec voiturette électrique</strong></td>
                   </tr>
                   <tr>
-                    <td>$ 325.00</td>
-                    <td>$ 460.00</td>
+                    <td>$ 375.00</td>
+                    <td>$ 520.00</td>
                   </tr>
                 </tbody>
               </TableLivret>
@@ -162,6 +167,8 @@ const StyledTarrifType = styled.div`
   padding: 0.5vw;
   color: #000000;
   position: relative;
+
+  border: 2px solid #FFFFFF;
 
   &:hover {
     border: 2px solid #34773A;

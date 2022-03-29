@@ -88,6 +88,7 @@ const StyledCard = styled.div`
   }
   float: left;
   margin: 0.5vw;
+  border: 2px solid #FFFFFF;
   &:hover {
     border: 2px solid #34773A;
     background: linear-gradient(139.73deg, #C4E9C2 0%, #72B46F 100%);

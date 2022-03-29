@@ -190,6 +190,8 @@ const StyledCard = styled.div`
   overflow: hidden;
   position: relative;
 
+  border: 2px solid #FFFFFF;
+
   &:hover {
     border: 2px solid #34773A;
     background: linear-gradient(139.73deg, #C4E9C2 0%, #72B46F 100%);
@@ -202,7 +204,7 @@ const Bleu = styled.div`
   float: right;
   border-radius: 10px;
   padding: 2px 4px 2px 4px;
-  margin-right: 10px;
+  margin-right: 3vw;
   color: #E2E2E2;
   font-size: 16px;
   font-weight:  400;
@@ -215,7 +217,7 @@ const Blanc = styled.div`
   border-radius: 10px;
   border: 1px solid #000000;
   padding: 2px 4px 2px 4px;
-  margin-right: 10px;
+  margin-right: 3vw;
   color: #000000;
   font-size: 16px;
   font-weight:  400;
@@ -227,7 +229,7 @@ const Or = styled.div`
   float: right;
   border-radius: 10px;
   padding: 2px 4px 2px 4px;
-  margin-right: 10px;
+  margin-right: 3vw;
   color: #E2E2E2;
   font-size: 16px;
   font-weight:  400;
@@ -239,7 +241,7 @@ const Rouge = styled.div`
   float: right;
   border-radius: 10px;
   padding: 2px 4px 2px 4px;
-  margin-right: 10px;
+  margin-right: 3vw;
   color: #E2E2E2;
   font-size: 16px;
   font-weight:  400;
