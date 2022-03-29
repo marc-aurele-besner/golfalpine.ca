@@ -1,7 +1,5 @@
-import { min } from "lodash"
 import React from "react"
 import ReactPlayer from 'react-player'
-import { maxHeight } from "styled-system"
 
 const Video: React.FC = () => {
     return (

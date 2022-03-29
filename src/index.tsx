@@ -1,25 +1,20 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Redirect, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 
 import Navigation from './Components/Navigation'
 import Footer from './Components/Footer'
-
 import Accueil from './Pages/Accueil'
-import Parcours from './Pages/Parcours'
-import Tarifs from './Pages/Tarifs'
-import PasseDeSaison from './Pages/PasseDeSaison'
-import Services from './Pages/Services'
-import NousContacter from './Pages/NousContacter'
-
-import Page404 from './Pages/Page404'
-
-// Covid-19
-import Covid from './Pages/Covid'
-
-import history from './routerHistory'
 import './styles.css'
+
+const Parcours = lazy(() => import('./Pages/Parcours'))
+const Tarifs = lazy(() => import('./Pages/Tarifs'))
+const PasseDeSaison = lazy(() => import('./Pages/PasseDeSaison'))
+const Services = lazy(() => import('./Pages/Services'))
+const NousContacter = lazy(() => import( './Pages/NousContacter'))
+const Covid = lazy(() => import('./Pages/Covid'))
+const Page404= lazy(() => import('./Pages/Page404'))
 
 const App = () => {
     return (
@@ -27,56 +22,30 @@ const App = () => {
             <HelmetProvider>
                 <Navigation />
 
-                <Router history={history}>
-                    <Switch>
-                        <Route path="/" exact>
-                            <Accueil />
-                        </Route>
-                        <Route path="/parcours">
-                            <Parcours />
-                        </Route>
-                        <Route path="/tarifs">
-                            <Tarifs />
-                        </Route>
-                        <Route path="/passeDeSaison">
-                            <PasseDeSaison />
-                        </Route>
-                        <Route path="/services">
-                            <Services />
-                        </Route>
-                        <Route path="/nousContacter">
-                            <NousContacter />
-                        </Route>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Accueil />} />
+                        <Route path="/parcours" element={<Parcours />} />
+                        <Route path="/tarifs" element={<Tarifs />} />
+                        <Route path="/passeDeSaison" element={<PasseDeSaison />} />
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/nousContacter" element={<NousContacter />} />
 
-                        
-                        <Route path="/index.php">
-                            <Redirect to="/" />
-                        </Route>
-                        <Route path="/index.php/parcours/">
-                            <Redirect to="/parcours" />
-                        </Route>
-                        <Route path="/index.php/tarifs/">
-                            <Redirect to="/tarifs" />
-                        </Route>
-                        <Route path="/index.php/membres/">
-                            <Redirect to="/passeDeSaison" />
-                        </Route>
-                        <Route path="/index.php/services/">
-                            <Redirect to="/services" />
-                        </Route>
-                        <Route path="/index.php/nous-contacter/">
-                            <Redirect to="/nousContacter" />
-                        </Route>
+                        {/* Support previous website link (wp) */}
+                        <Route path="/index.php" element={<Accueil />} />
+                        <Route path="/index.php/parcours/" element={<Parcours />} />
+                        <Route path="/index.php/tarifs/" element={<Tarifs />} />
+                        <Route path="/index.php/membres/" element={<PasseDeSaison />} />
+                        <Route path="/index.php/services/" element={<Services />} />
+                        <Route path="/index.php/nous-contacter/" element={<NousContacter />} />
 
                         {/* Covid-19 */}
-                        
-                        <Route path="/covid">
-                            <Covid />
-                        </Route>
+                        <Route path="/covid" element={<Covid />} />
 
-                        <Page404 />
-                    </Switch>
-                </Router>
+                        {/* Not found */}
+                        <Route path="*" element={<Page404 />} />
+                    </Routes>
+                </BrowserRouter>
             </HelmetProvider>
 
             <Footer />
@@ -84,4 +53,6 @@ const App = () => {
     )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Suspense fallback={null}>
+    <App />
+</Suspense>, document.getElementById('root'))
