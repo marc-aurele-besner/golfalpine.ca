@@ -1,4 +1,4 @@
-import React, { lazy } from 'react'
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
@@ -18,7 +18,7 @@ const Page404= lazy(() => import('./Pages/Page404'))
 
 const App = () => {
     return (
-        <div>
+        <Suspense fallback={null}>
             <HelmetProvider>
                 <Navigation />
 
@@ -49,7 +49,7 @@ const App = () => {
             </HelmetProvider>
 
             <Footer />
-        </div>
+        </Suspense>
     )
 }
 
