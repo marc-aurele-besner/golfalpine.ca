@@ -14,7 +14,7 @@ export const combineDateAndTime = (date: Date, time: Date) => {
 }
 
 export const getFormErrors = (formData: FormState) => {
-  const { startDate, startTime, name, telephone, email, ppl, type } = formData
+  const { startDate, startTime, name, telephone, email, ppl } = formData
   const errors: { [key: string]: string[] } = {}
 
   if (!name) {
@@ -40,8 +40,6 @@ export const getFormErrors = (formData: FormState) => {
   if (!isValid(startTime)) {
     errors.startTime = ['Selectioner un heure valide']
   }
-
-  const startDateTimestamp = combineDateAndTime(startDate, startTime)
 
   return errors
 }

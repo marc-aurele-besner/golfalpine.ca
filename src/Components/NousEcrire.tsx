@@ -34,15 +34,10 @@ const initialState: ContactFormState = {
 }
 
 const NousEcrire: React.FC = () => {
-    const [send, setSend] = useState(false)
-    const [state, setState] = useState<ContactFormState>({
-        name: '',
-        email: '',
-        sujet: '',
-        message: '',
-        })
-    const { name, email, sujet, message } = state
-  const [fieldsState, setFieldsState] = useState<{ [key: string]: boolean }>({})
+  const [send, setSend] = useState(false)
+  const [state, setState] = useState<ContactFormState>(initialState)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { name, email, sujet, message } = state
   const formErrors = getContactFormErrors(state)
 
   const handleChange = (e: any) => {
@@ -50,24 +45,11 @@ const NousEcrire: React.FC = () => {
     setState((prevState) => ({ ...prevState, [name]: value }))
   }
   const clearState = () => setState({
-        name: '',
-        email: '',
-        sujet: '',
-        message: '',
-    })
-
-  const updateValue = (key: string, value: string | number | Date) => {
-    setState((prevState) => ({
-      ...prevState,
-      [key]: value,
-    }))
-
-    // Keep track of what fields the user has attempted to edit
-    setFieldsState((prevFieldsState) => ({
-      ...prevFieldsState,
-      [key]: true,
-    }))
-  }
+    name: '',
+    email: '',
+    sujet: '',
+    message: '',
+  })
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
@@ -103,7 +85,7 @@ const NousEcrire: React.FC = () => {
               required
               onChange={handleChange}
             />
-            {formErrors.handleDateChange && fieldsState.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
+            {formErrors.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
           </Box>
           <Box>
             <BaseLabel>Votre courriel</BaseLabel>
@@ -116,7 +98,7 @@ const NousEcrire: React.FC = () => {
               required
               onChange={handleChange}
             />
-            {formErrors.handleDateChange && fieldsState.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
+            {formErrors.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
           </Box>
           <Box>
             <BaseLabel>Sujet</BaseLabel>
@@ -129,7 +111,7 @@ const NousEcrire: React.FC = () => {
               required
               onChange={handleChange} 
             />
-            {formErrors.handleDateChange && fieldsState.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
+            {formErrors.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
           </Box>
           <Box>
             <BaseLabel>Message</BaseLabel>
@@ -141,7 +123,7 @@ const NousEcrire: React.FC = () => {
               required
               onChange={handleChange} 
             />
-            {formErrors.handleDateChange && fieldsState.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
+            {formErrors.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
           </Box>
           <Box>
             <CenterStyled>
