@@ -18,7 +18,7 @@ const Page404= lazy(() => import('./Pages/Page404'))
 
 const App = () => {
     return (
-        <Suspense fallback={null}>
+        <div>
             <HelmetProvider>
                 <Navigation />
 
@@ -49,8 +49,10 @@ const App = () => {
             </HelmetProvider>
 
             <Footer />
-        </Suspense>
+        </div>
     )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Suspense fallback={null}>
+    <App />
+</Suspense>, document.getElementById('root'))
