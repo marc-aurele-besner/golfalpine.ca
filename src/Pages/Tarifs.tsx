@@ -19,29 +19,31 @@ const Tarifs: React.FC = () => {
           <Table>
             <tbody>
               <tr>
-                <td>
+                <TdDescription>
                   <h3>
                     <b>Tarifs régulier</b>
                   </h3>
-                </td>
-                <td>
+                </TdDescription>
+                <Td9Trous>
                   <strong>9 trous</strong>
-                </td>
-                <td>
+                </Td9Trous>
+                <Td18Trous>
                   <strong>18 trous</strong>
-                </td>
+                </Td18Trous>
               </tr>
               <tr>
-                <td>
+                <TdDescription>
                   <strong>Lundi au Vendredi</strong>
-                </td>
-                <td>$ 29.00</td>
-                <td>$ 42.00</td>
+                </TdDescription>
+                <Td9Trous>$ 29.00</Td9Trous>
+                <Td18Trous>$ 42.00</Td18Trous>
               </tr>
                 <tr>
-                  <td><strong>Samedi et Dimanche</strong><br />Et jours fériés</td>
-                  <td>$ 31.00</td>
-                  <td>$ 44.00</td>
+                  <TdDescription>
+                    <strong>Samedi et Dimanche</strong><br />Et jours fériés
+                  </TdDescription>
+                  <Td9Trous>$ 31.00</Td9Trous>
+                  <Td18Trous>$ 44.00</Td18Trous>
                 </tr>
               </tbody>
             </Table>
@@ -50,18 +52,20 @@ const Tarifs: React.FC = () => {
             <Table>
               <tbody>
                 <tr>
-                  <td><strong><h3>Tarifs à rabais</h3></strong></td>
-                  <td>
+                  <TdDescription>
+                    <strong><h3>Tarifs à rabais</h3></strong>
+                  </TdDescription>
+                  <Td9Trous>
                     <strong>9 trous</strong>
-                  </td>
-                  <td></td>
+                  </Td9Trous>
+                  <Td18Trous></Td18Trous>
                 </tr>
                 <tr>
-                  <td>
+                  <TdDescription>
                     <strong>Lundi au Dimanche</strong><br />Avant 8 heures<br />Après 16 heures
-                  </td>
-                  <td>$ 22.00</td>
-                  <td> N/A</td>
+                  </TdDescription>
+                  <Td9Trous>$ 22.00</Td9Trous>
+                  <Td18Trous> N/A</Td18Trous>
                 </tr>
               </tbody>
             </Table>
@@ -70,36 +74,42 @@ const Tarifs: React.FC = () => {
             <Table>
               <tbody>
                 <tr>
-                  <td>
+                  <TdDescription>
                     <h3>
                       <b>Accessoires</b>
                     </h3>
-                  </td>
-                <td>
-                  <strong>9 trous</strong>
-                </td>
-                <td>
-                  <strong>18 trous</strong>
-                </td>
+                  </TdDescription>
+                  <Td9Trous>
+                    <strong>9 trous</strong>
+                  </Td9Trous>
+                  <Td18Trous>
+                    <strong>18 trous</strong>
+                  </Td18Trous>
                 </tr>
               </tbody>
             </Table>
             <Table>
               <tbody>
                 <tr>
-                  <td><strong>Voiturette électrique</strong><br />1 personne<br />2 personnes</td>
-                  <td>$ 17.00<br />$ 22.00</td>
-                  <td>$ 22.00<br />$ 35.00</td>
+                  <TdDescription>
+                    <strong>Voiturette électrique</strong><br />1 personne<br />2 personnes
+                  </TdDescription>
+                  <Td9Trous>$ 17.00<br />$ 22.00</Td9Trous>
+                  <Td18Trous>$ 22.00<br />$ 35.00</Td18Trous>
                 </tr>
                 <tr>
-                  <td><strong>Voiturette à main</strong></td>
-                  <td>$ 6.00</td>
-                  <td>$ 10.00</td>
+                  <TdDescription>
+                    <strong>Voiturette à main</strong>
+                  </TdDescription>
+                  <Td9Trous>$ 6.00</Td9Trous>
+                  <Td18Trous>$ 10.00</Td18Trous>
                 </tr>
                 <tr>
-                  <td><strong>Location de bâtons de golf</strong></td>
-                  <td>$ 17.00</td>
-                  <td>$ 20.00</td>
+                  <TdDescription>
+                    <strong>Location de bâtons de golf</strong>
+                  </TdDescription>
+                  <Td9Trous>$ 17.00</Td9Trous>
+                  <Td18Trous>$ 20.00</Td18Trous>
                 </tr>
               </tbody>
             </Table>
@@ -114,19 +124,21 @@ const Tarifs: React.FC = () => {
               <TableLivret>
                 <tbody>
                   <tr>
-                    <th>9 trous</th>
-                    <th>18 trous</th>
+                    <ThLivret>9 trous</ThLivret>
+                    <ThLivret>18 trous</ThLivret>
                   </tr>
                   <tr>
-                    <td>$ 245.00</td>
-                    <td>$ 355.00</td>
+                    <TdLivret>$ 245.00</TdLivret>
+                    <TdLivret>$ 355.00</TdLivret>
                     </tr>
                   <tr>
-                    <td colSpan={2}><strong>Avec voiturette électrique</strong></td>
+                    <td colSpan={2}>
+                      <strong>Avec voiturette électrique</strong>
+                    </td>
                   </tr>
                   <tr>
-                    <td>$ 375.00</td>
-                    <td>$ 520.00</td>
+                    <TdLivret>$ 375.00</TdLivret>
+                    <TdLivret>$ 520.00</TdLivret>
                   </tr>
                 </tbody>
               </TableLivret>
@@ -248,6 +260,21 @@ const Table = styled.table`
   }
 `;
 
+const TdDescription = styled.td`
+  max-width: 50%;
+  width: 50%;
+`;
+
+const Td9Trous = styled.td`
+  max-width: 25%;
+  width: 25%;
+`;
+
+const Td18Trous = styled.td`
+  max-width: 25%;
+  width: 25%;
+`;
+
 const TableLivret = styled.table`
   max-width: 100%;
   width: 100%;
@@ -269,6 +296,16 @@ const TableLivret = styled.table`
       border-bottom: 0;
     }
   }
+`;
+
+const ThLivret = styled.th`
+  max-width: 50%;
+  width: 50%;
+`;
+
+const TdLivret = styled.td`
+  max-width: 50%;
+  width: 50%;
 `;
 
 export default Tarifs

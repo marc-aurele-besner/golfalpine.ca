@@ -13,9 +13,6 @@ const Accueil: React.FC = () => {
       <Video />
       <div className="container">
         {/*<Reservation /> */}
-            <h3>
-              La saison de golf 2021 est terminé.
-            </h3>
         <StyledCardFrame>
           <StyledCard>
             <img src="/img/AfficheGolfeurResponsable_small.png" alt="COVID-19" width="100%" />

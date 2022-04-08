@@ -17,64 +17,77 @@ const PasseDeSaison: React.FC = () => {
       <StyledPassesType>
         <h3>9 trous <Limit>Maximum de 30 passes de saison</Limit></h3>
         <Table>
-            <thead>
-                <tr>
-                    <th>Tarifs</th>
-                    <th>1 personne</th>
-                    <th>Couple</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>5 jours</strong><small>(Excluant les jours fériés)</small></td>
-                    <td>$ 995.00</td><td>$ 1795.00</td>
-                </tr>
-                <tr>
-                    <td><strong>7 jours</strong></td>
-                    <td>$ 1195.00</td>
-                    <td>$ 2135.00</td>
-                </tr>
-            </tbody>
+          <thead>
+            <tr>
+              <ThDescription>Tarifs</ThDescription>
+              <Th1Personne>1 personne</Th1Personne>
+              <ThCouple>Couple</ThCouple>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <TdDescription>
+                <strong>5 jours</strong><small>(Excluant les jours fériés)</small>
+              </TdDescription>
+              <Td1Personne>$ 995.00</Td1Personne>
+              <TdCouple>$ 1795.00</TdCouple>
+            </tr>
+            <tr>
+              <TdDescription>
+                <strong>7 jours</strong>
+              </TdDescription>
+              <Td1Personne>$ 1195.00</Td1Personne>
+              <TdCouple>$ 2135.00</TdCouple>
+            </tr>
+          </tbody>
         </Table>
       </StyledPassesType>
       <StyledPassesType>
         <h3>18 trous <Limit>Maximum de 20 passes de saison</Limit></h3>
         <Table>
-            <thead>
-                <tr>
-                    <th>Tarifs</th>
-                    <th>1 personne</th>
-                    <th>Couple</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>5 jours</strong> <small>(Excluant les jours fériés)</small></td>
-                    <td>$ 1495.00</td>
-                    <td>$ 2695.00</td>
-                </tr>
-                <tr>
-                    <td><strong>7 jours</strong> </td>
-                    <td>$ 1795.00</td>
-                    <td>$ 3250.00</td>
-                </tr>
-            </tbody>
+          <thead>
+            <tr>
+              <ThDescription>Tarifs</ThDescription>
+              <Th1Personne>1 personne</Th1Personne>
+              <ThCouple>Couple</ThCouple>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <TdDescription>
+                <strong>5 jours</strong> <small>(Excluant les jours fériés)</small>
+              </TdDescription>
+              <Td1Personne>$ 1495.00</Td1Personne>
+              <TdCouple>$ 2695.00</TdCouple>
+            </tr>
+            <tr>
+              <TdDescription>
+                <strong>7 jours</strong>
+              </TdDescription>
+              <Td1Personne>$ 1795.00</Td1Personne>
+              <TdCouple>$ 3250.00</TdCouple>
+            </tr>
+          </tbody>
         </Table>
       </StyledPassesType>
       <StyledPassesType>
         <h3>Après 15 heures <Limit>Maximum de 25 passes de saison</Limit></h3>
         <Table>
             <thead>
-                <tr>
-                    <th>Tarifs</th>
-                    <th>1 personne</th>
-                    <th>Couple</th>
-                </tr>
+              <tr>
+                <ThDescription>Tarifs</ThDescription>
+                <Th1Personne>1 personne</Th1Personne>
+                <ThCouple></ThCouple>
+              </tr>
             </thead>
-                <tbody><tr>
-                    <td><strong>Après 15 heures</strong> (9 trous, dernier départ avec voiturette à 16 heures)</td>
-                    <td>$ 795.00</td>
-                </tr>
+            <tbody>
+              <tr>
+                <TdDescription>
+                  <strong>Après 15 heures</strong> (9 trous, dernier départ avec voiturette à 16 heures)
+                </TdDescription>
+                <Td1Personne>$ 795.00</Td1Personne>
+                <TdCouple></TdCouple>
+              </tr>
             </tbody>
         </Table>
       </StyledPassesType>
@@ -82,17 +95,20 @@ const PasseDeSaison: React.FC = () => {
         <h3>Supplément</h3>
         <Table>
             <thead>
-                <tr>
-                    <th>Tarifs</th>
-                    <th>1 personne</th>
-                    <th>Couple</th>
-                </tr>
+              <tr>
+                <ThDescription>Tarifs</ThDescription>
+                <Th1Personne>1 personne</Th1Personne>
+                <ThCouple>Couple</ThCouple>
+              </tr>
             </thead>
-                <tbody><tr>
-                    <td><strong>Voiturette électrique</strong> <br /></td>
-                    <td>$ 600.00</td>
-                    <td>$ 775.00</td>
-                </tr>
+            <tbody>
+              <tr>
+                <TdDescription>
+                  <strong>Voiturette électrique</strong> <br />
+                </TdDescription>
+                <Td1Personne>$ 600.00</Td1Personne>
+                <TdCouple>$ 775.00</TdCouple>
+              </tr>
             </tbody>
         </Table>
       </StyledPassesType>
@@ -141,6 +157,8 @@ const Limit = styled.div`
   color: #FFFFFF;
   font-size: 2.5vh;
   margin-right: 50%;
+  margin-left: 2vw;
+  margin-top: 0.5vh;
   @media only screen and (max-width: 600px) {
     padding: 0.5vw 1vw 0.5vw 1vw;
     margin-top: 0.5vh;
@@ -149,6 +167,7 @@ const Limit = styled.div`
   }
   font-weight:  400;
   line-height: 1.5;
+  border: 2px solid #34773A;
   &:hover {
     color: #34773A;
     border: 2px solid #34773A;
@@ -178,6 +197,36 @@ const Table = styled.table`
       border-bottom: 0;
     }
   }
+`;
+
+const ThDescription = styled.th`
+  max-width: 60%;
+  width: 60%;
+`;
+
+const Th1Personne = styled.th`
+  max-width: 20%;
+  width: 20%;
+`;
+
+const ThCouple = styled.th`
+  max-width: 20%;
+  width: 20%;
+`;
+
+const TdDescription = styled.td`
+  max-width: 60%;
+  width: 60%;
+`;
+
+const Td1Personne = styled.td`
+  max-width: 20%;
+  width: 20%;
+`;
+
+const TdCouple = styled.td`
+  max-width: 20%;
+  width: 20%;
 `;
 
 export default PasseDeSaison
