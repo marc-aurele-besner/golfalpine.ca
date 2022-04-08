@@ -1,13 +1,21 @@
 {
   "name": "golfalpine.ca",
   "version": "1.0.0",
-  "description": "GolfAlpine.ca",
+  "description": "GolfAlpine.ca - Le Club de Golf Alpine, qui a vu le jour en 1910, est situé entre les villages de Sainte-Adèle et de Sainte-Marguerite. Un trajet d'à peine 60 kilomètres.",
   "license": "MIT",
   "main": "src/index.js",
   "keywords": [
     "golf",
-    "alpine"
+    "alpine",
+    "golf-alipne",
+    "sainte-adele",
+    "golf-club"
   ],
+  "repository": "https://github.com/marc-aurele-besner/golfalpine.ca.git",
+  "author": "Marc-Aurele Besner <82244926+marc-aurele-besner@users.noreply.github.com>",
+  "bugs": {
+    "url": "https://github.com/marc-aurele-besner/golfalpine.ca/issues"
+  },
   "scripts": {
     "test": "ereact-scripts test",
     "start": "react-scripts start",
