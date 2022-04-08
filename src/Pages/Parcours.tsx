@@ -257,7 +257,10 @@ const Table = styled.table`
   td {
     border-bottom: 1px solid #34773A;
     color: #000000;
-    padding: 2vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
   }
 
   th {
@@ -299,6 +302,8 @@ const StyledImages = styled.img`
   top: 0;
   height: 100%;
   width: 100%;
+  border-radius: 5%;
+  border: 2px solid #E2E2E2;
   
   max-height: 100%;
   max-width: 100%;
