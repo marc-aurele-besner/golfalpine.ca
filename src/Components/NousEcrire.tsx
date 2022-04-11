@@ -6,6 +6,7 @@ import { getContactFormErrors } from './helpers'
 export interface ContactFormState {
     name: string;
     email: string;
+    reply_to: string;
     sujet: string;
     message: string;
 }
@@ -29,6 +30,7 @@ const FormErrors: React.FC<{ errors: string[] }> = ({ errors }) => {
 const initialState: ContactFormState = {
     name: '',
     email: '',
+    reply_to: '',
     sujet: '',
     message: '',
 }
@@ -37,7 +39,7 @@ const NousEcrire: React.FC = () => {
   const [send, setSend] = useState(false)
   const [state, setState] = useState<ContactFormState>(initialState)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { name, email, sujet, message } = state
+  const { name, email, reply_to, sujet, message } = state
   const formErrors = getContactFormErrors(state)
 
   const handleChange = (e: any) => {
@@ -47,6 +49,7 @@ const NousEcrire: React.FC = () => {
   const clearState = () => setState({
     name: '',
     email: '',
+    reply_to: '',
     sujet: '',
     message: '',
   })
@@ -96,6 +99,13 @@ const NousEcrire: React.FC = () => {
               name="email" 
               id="email"
               required
+              onChange={handleChange}
+            />
+            <Input
+              type="hidden"
+              name="reply_to"
+              id="reply_to"
+              value={email}
               onChange={handleChange}
             />
             {formErrors.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
