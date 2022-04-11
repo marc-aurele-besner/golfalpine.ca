@@ -16,28 +16,28 @@ const Tarifs: React.FC = () => {
       <StyledBox>
         <StyledCardTarifs>
           <StyledTarrifType>
-          <Table>
-            <tbody>
-              <tr>
-                <TdDescription>
-                  <h3>
-                    <b>Tarifs régulier</b>
-                  </h3>
-                </TdDescription>
-                <Td9Trous>
-                  <strong>9 trous</strong>
-                </Td9Trous>
-                <Td18Trous>
-                  <strong>18 trous</strong>
-                </Td18Trous>
-              </tr>
-              <tr>
-                <TdDescription>
-                  <strong>Lundi au Vendredi</strong>
-                </TdDescription>
-                <Td9Trous>$ 29.00</Td9Trous>
-                <Td18Trous>$ 42.00</Td18Trous>
-              </tr>
+            <Table>
+              <tbody>
+                <tr>
+                  <TdDescription>
+                    <h3>
+                      <b>Tarifs régulier</b>
+                    </h3>
+                  </TdDescription>
+                  <Td9Trous>
+                    <strong>9 trous</strong>
+                  </Td9Trous>
+                  <Td18Trous>
+                    <strong>18 trous</strong>
+                  </Td18Trous>
+                </tr>
+                <tr>
+                  <TdDescription>
+                    <strong>Lundi au Vendredi</strong>
+                  </TdDescription>
+                  <Td9Trous>$ 29.00</Td9Trous>
+                  <Td18Trous>$ 42.00</Td18Trous>
+                </tr>
                 <tr>
                   <TdDescription>
                     <strong>Samedi et Dimanche</strong><br />Et jours fériés
@@ -219,7 +219,16 @@ const StyledCardLivret = styled.div`
 
 const StyledLabelLivret = styled.div`
   width: 100%;
-  padding-top: 0.5vw;
+  margin-top: 0.5vw;
+  padding-top: 1vw;
+
+  border: 2px solid #FFFFFF;
+  
+  &:hover {
+    border: 2px solid #34773A;
+    background: linear-gradient(139.73deg, #D3F4D1 0%, #8BD087 100%);
+    border-radius: 25px;
+  }
 `;
 
 const StyledImages = styled.img`
