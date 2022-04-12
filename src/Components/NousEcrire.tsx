@@ -135,21 +135,23 @@ const NousEcrire: React.FC = () => {
             />
             {formErrors.handleDateChange && <FormErrors errors={formErrors.handleDateChange} />}
           </Box>
-          <Box>
-            <CenterStyled>
-              <StyledButton 
-                type="submit" 
-                id="button" 
-                value="Send Email">
-                Envoyer
-              </StyledButton>
-            </CenterStyled>
-          </Box>
-            {send && (
-                <Box>
-                    <BaseLabel>Message envoyé!</BaseLabel>
-                </Box>
-            )}
+          {!send && (
+            <Box>
+              <CenterStyled>
+                <StyledButton 
+                  type="submit" 
+                  id="button" 
+                  value="Send Email">
+                  Envoyer
+                </StyledButton>
+              </CenterStyled>
+            </Box>
+          )}
+          {send && (
+              <Box>
+                  <BaseLabel>Message envoyé!</BaseLabel>
+              </Box>
+          )}
         </form>
         </>
   )
