@@ -14,6 +14,7 @@ const Accueil: React.FC = () => {
       <div className="container">
         {/*<Reservation /> */}
         <StyledCardFrame>
+          <StyledOpen>Ouverture du Club de Golf Alpine Vendredi le 6 mai 2022!</StyledOpen>
           <StyledCard>
             <img src="/img/AfficheGolfeurResponsable_small.png" alt="COVID-19" width="100%" />
             <h3>COVID-19</h3>
@@ -52,6 +53,10 @@ const Accueil: React.FC = () => {
     </>
   )
 }
+const StyledOpen = styled.h1`
+  padding-left: 1vw;
+`;
+
 const StyledCardFrame = styled.div`
   padding: 0.5vw;
   height: 500px;
