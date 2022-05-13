@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import emailjs from '@emailjs/browser'
-import ReactDatePicker, { ReactDatePickerProps, registerLocale } from 'react-datepicker'
+import ReactDatePicker, { registerLocale } from 'react-datepicker'
 import fr from "date-fns/locale/fr"
 import { getFormErrors } from './helpers'
 
@@ -15,13 +15,9 @@ export interface FormState {
     name: string;
     telephone: string;
     email: string;
+    reply_to: string;
     ppl: number;
     type: number;
-}
-
-interface Locale {
-  localize: any;
-  formatLong: any;
 }
 
 const FormError: React.FC = ({ children }) => (
@@ -46,19 +42,9 @@ const initialState: FormState = {
     name: '',
     telephone: '',
     email: '',
+    reply_to: '',
     ppl: 0,
     type: 9,
-}
-
-const months: any = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
-const days: any = ['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pz']
-
-const locale: Locale  = {
-  localize: {
-    month: n => months[n],
-    day: n => days[n]
-  },
-  formatLong: {}
 }
 
 const GolfSvg = () => {
@@ -96,16 +82,9 @@ const GolfSvg = () => {
 
 const Accueil: React.FC = () => {
     const [send, setSend] = useState(false)
-    const [state, setState] = useState<FormState>({
-        startDate: new Date(),
-        startTime: new Date(),
-        name: '',
-        telephone: '',
-        email: '',
-        ppl: 0,
-        type: 9,
-        })
-  const { startDate, startTime, name, telephone, email, ppl, type } = state
+    const [state, setState] = useState<FormState>(initialState)
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { startDate, startTime, name, telephone, email, reply_to, ppl, type } = state
   const [fieldsState, setFieldsState] = useState<{ [key: string]: boolean }>({})
   const formErrors = getFormErrors(state)
 
@@ -119,6 +98,7 @@ const Accueil: React.FC = () => {
         name: '',
         telephone: '',
         email: '',
+        reply_to: '',
         ppl: 0,
         type: 9,
     })
@@ -250,6 +230,13 @@ const Accueil: React.FC = () => {
                                 value={email} 
                                 required
                                 onChange={handleChange}
+                            />
+                            <Input
+                              type="hidden"
+                              name="reply_to"
+                              id="reply_to"
+                              value={email}
+                              onChange={handleChange}
                             />
                             {formErrors.email && fieldsState.email && <FormErrors errors={formErrors.email} />}
                         </Box>
