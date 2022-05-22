@@ -104,13 +104,6 @@ const Tarifs: React.FC = () => {
                   <Td9Trous>$ 6.00</Td9Trous>
                   <Td18Trous>$ 10.00</Td18Trous>
                 </tr>
-                <tr>
-                  <TdDescription>
-                    <strong>Location de bâtons de golf</strong>
-                  </TdDescription>
-                  <Td9Trous>$ 17.00</Td9Trous>
-                  <Td18Trous>$ 20.00</Td18Trous>
-                </tr>
               </tbody>
             </Table>
           </StyledTarrifType>
