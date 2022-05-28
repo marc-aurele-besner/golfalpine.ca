@@ -58,7 +58,7 @@ const Services: React.FC = () => {
                 Cartes Cadeaux</td>
               <td>
                 <GolfBall />
-                Terrain de pratique</td>
+                Vert de pratique</td>
             </tr>
             <tr>
               <td>
@@ -67,14 +67,6 @@ const Services: React.FC = () => {
               <td>
                 <GolfBall />
                 Voiturettes à main</td>
-            </tr>
-            <tr>
-              <td>
-                <GolfBall />
-                Vert de pratique</td>
-              <td>
-                <GolfBall />
-                Location d’équipements</td>
             </tr>
             <tr>
               <td>
