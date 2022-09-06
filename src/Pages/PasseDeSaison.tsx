@@ -6,12 +6,12 @@ const PasseDeSaison: React.FC = () => {
   return (
     <>
     <Helmet>
-      <title>Golf Alpine - Passe de saison 2022 au Club de Golf Alpine</title>
+      <title>Golf Alpine - Passe de saison 2023 au Club de Golf Alpine</title>
     </Helmet>
     <div className="container" id='about'>
       <StyledCard>
       <h2>
-        Passe de saison <u>2022</u> au Club de Golf Alpine
+        Passe de saison <u>2023</u> au Club de Golf Alpine
       </h2>
       <br />
       <StyledPassesType>
@@ -29,43 +29,15 @@ const PasseDeSaison: React.FC = () => {
               <TdDescription>
                 <strong>5 jours</strong><small>(Excluant les jours fériés)</small>
               </TdDescription>
-              <Td1Personne>$ 995.00</Td1Personne>
-              <TdCouple>$ 1795.00</TdCouple>
+              <Td1Personne>$ 1045.00</Td1Personne>
+              <TdCouple>$ 1895.00</TdCouple>
             </tr>
             <tr>
               <TdDescription>
                 <strong>7 jours</strong>
               </TdDescription>
-              <Td1Personne>$ 1195.00</Td1Personne>
-              <TdCouple>$ 2135.00</TdCouple>
-            </tr>
-          </tbody>
-        </Table>
-      </StyledPassesType>
-      <StyledPassesType>
-        <h3>18 trous <Limit>Maximum de 20 passes de saison</Limit></h3>
-        <Table>
-          <thead>
-            <tr>
-              <ThDescription>Tarifs</ThDescription>
-              <Th1Personne>1 personne</Th1Personne>
-              <ThCouple>Couple</ThCouple>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <TdDescription>
-                <strong>5 jours</strong> <small>(Excluant les jours fériés)</small>
-              </TdDescription>
-              <Td1Personne>$ 1495.00</Td1Personne>
-              <TdCouple>$ 2695.00</TdCouple>
-            </tr>
-            <tr>
-              <TdDescription>
-                <strong>7 jours</strong>
-              </TdDescription>
-              <Td1Personne>$ 1795.00</Td1Personne>
-              <TdCouple>$ 3250.00</TdCouple>
+              <Td1Personne>$ 1275.00</Td1Personne>
+              <TdCouple>$ 2295.00</TdCouple>
             </tr>
           </tbody>
         </Table>
@@ -85,7 +57,7 @@ const PasseDeSaison: React.FC = () => {
                 <TdDescription>
                   <strong>Après 15 heures</strong> (9 trous, dernier départ avec voiturette à 16 heures)
                 </TdDescription>
-                <Td1Personne>$ 795.00</Td1Personne>
+                <Td1Personne>$ 835.00</Td1Personne>
                 <TdCouple></TdCouple>
               </tr>
             </tbody>
@@ -106,8 +78,8 @@ const PasseDeSaison: React.FC = () => {
                 <TdDescription>
                   <strong>Voiturette électrique</strong> <br />
                 </TdDescription>
-                <Td1Personne>$ 600.00</Td1Personne>
-                <TdCouple>$ 775.00</TdCouple>
+                <Td1Personne>$ 625.00</Td1Personne>
+                <TdCouple>$ 800.00</TdCouple>
               </tr>
             </tbody>
         </Table>
