@@ -20,9 +20,9 @@ export interface FormState {
     type: number;
 }
 
-const FormError: React.FC = ({ children }) => (
+const FormError: React.FC<{ error: string }> = ({ error }) => (
     <Errors>
-      {children}
+      {error}
     </Errors>
 )
 
@@ -30,7 +30,7 @@ const FormErrors: React.FC<{ errors: string[] }> = ({ errors }) => {
     return (
       <Box>
         {errors.map((error) => {
-            return <FormError key={error}>{error}</FormError>
+            return <FormError key={error} error={error} />
         })}
       </Box>
     )
