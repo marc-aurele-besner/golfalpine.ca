@@ -17,7 +17,7 @@
     "url": "https://github.com/marc-aurele-besner/golfalpine.ca/issues"
   },
   "scripts": {
-    "test": "ereact-scripts test",
+    "test": "react-scripts test",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
