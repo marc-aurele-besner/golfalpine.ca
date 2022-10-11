@@ -1,66 +1,64 @@
-import { format, parseISO, isValid } from 'date-fns'
-import { FormState } from './Reservation'
-import { ContactFormState } from './NousEcrire'
+import { format, parseISO, isValid } from 'date-fns';
+import { FormState } from './Reservation';
+import { ContactFormState } from './NousEcrire';
 
 export const combineDateAndTime = (date: Date, time: Date) => {
   if (!isValid(date) || !isValid(time)) {
-    return null
+    return null;
   }
 
-  const dateStr = format(date, 'yyyy-MM-dd')
-  const timeStr = format(time, 'HH:mm:ss')
+  const dateStr = format(date, 'yyyy-MM-dd');
+  const timeStr = format(time, 'HH:mm:ss');
 
-  return parseISO(`${dateStr}T${timeStr}`).getTime() / 1e3
-}
+  return parseISO(`${dateStr}T${timeStr}`).getTime() / 1e3;
+};
 
 export const getFormErrors = (formData: FormState) => {
-  const { startDate, startTime, name, telephone, email, ppl } = formData
-  const errors: { [key: string]: string[] } = {}
+  const { startDate, startTime, name, telephone, email, ppl } = formData;
+  const errors: { [key: string]: string[] } = {};
 
   if (!name) {
-    errors.name = ['Votre nom est requis']
+    errors.name = ['Votre nom est requis'];
   }
 
   if (!telephone) {
-    errors.telephone = ['Votre numéro de téléphone est requis']
+    errors.telephone = ['Votre numéro de téléphone est requis'];
   }
 
   if (!email) {
-    errors.email = ['Votre courriel est requis']
+    errors.email = ['Votre courriel est requis'];
   }
 
   if (!ppl) {
-    errors.ppl = ['Le nombre de joueur est requis']
+    errors.ppl = ['Le nombre de joueur est requis'];
   }
 
   if (!isValid(startDate)) {
-    errors.startDate = ['Selectioner une date valide']
+    errors.startDate = ['Selectioner une date valide'];
   }
 
   if (!isValid(startTime)) {
-    errors.startTime = ['Selectioner un heure valide']
+    errors.startTime = ['Selectioner un heure valide'];
   }
 
-  return errors
-}
-
+  return errors;
+};
 
 export const getContactFormErrors = (formData: ContactFormState) => {
-  const { name, email, sujet } = formData
-  const errors: { [key: string]: string[] } = {}
+  const { name, email, sujet } = formData;
+  const errors: { [key: string]: string[] } = {};
 
   if (!name) {
-    errors.name = ['Votre nom est requis']
+    errors.name = ['Votre nom est requis'];
   }
 
   if (!email) {
-    errors.email = ['Votre courriel est requis']
+    errors.email = ['Votre courriel est requis'];
   }
 
   if (!sujet) {
-    errors.ppl = ['Le sujet est requis']
+    errors.ppl = ['Le sujet est requis'];
   }
 
-
-  return errors
-}
+  return errors;
+};

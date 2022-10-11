@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Helmet } from 'react-helmet-async'
-import Video from '../Components/Video'
-import Reservation from '../Components/Reservation'
+import React from 'react';
+import styled from 'styled-components';
+import { Helmet } from 'react-helmet-async';
+import Video from '../Components/Video';
+import Reservation from '../Components/Reservation';
 
 const Accueil: React.FC = () => {
   return (
     <>
-    <Helmet>
-      <title>Golf Alpine - Accueil</title>
-    </Helmet>
+      <Helmet>
+        <title>Golf Alpine - Accueil</title>
+      </Helmet>
       <Video />
       <div className="container">
         <Reservation />
@@ -18,41 +18,36 @@ const Accueil: React.FC = () => {
           <StyledCard>
             <img src="/img/AfficheGolfeurResponsable_small.png" alt="COVID-19" width="100%" />
             <h3>COVID-19</h3>
-            <p>
-              Avant de venir jouer, nous vous demandons de consulter les consignes pour les golfeurs relatif au Corona Virus.
-            </p>
+            <p>Avant de venir jouer, nous vous demandons de consulter les consignes pour les golfeurs relatif au Corona Virus.</p>
             <Link href="/covid">Agrandir</Link>
           </StyledCard>
           <StyledCard>
             <img src="/img/thumb_2.png" alt="Visite Virtuelle9" width="100%" />
             <h3>Visite Virtuelle</h3>
-            <p>
-              Visiter notre club de Golf centenaire avec la technologie d’aujourd’hui.
-            </p>
-            <Link href="https://goo.gl/maps/Z8TL2" target="_blank">visite virtulle</Link>
+            <p>Visiter notre club de Golf centenaire avec la technologie d’aujourd’hui.</p>
+            <Link href="https://goo.gl/maps/Z8TL2" target="_blank">
+              visite virtulle
+            </Link>
           </StyledCard>
           <StyledCard>
             <img src="/img/thumb_history.jpg" alt="Histoire (1910 à 2020)" width="100%" />
             <h3>Histoire (1910 à 2020)</h3>
-            <p>
-            Depuis le tout début du siècle dernier, le golf Alpine fait figure de véritable institution à Saint-Adèle.
-            </p>
+            <p>Depuis le tout début du siècle dernier, le golf Alpine fait figure de véritable institution à Saint-Adèle.</p>
           </StyledCard>
           <StyledBody>
             <h1>Laissez-vous séduire par la beauté du paysage et le tracé des allées…</h1>
             <p>
-              Le Club de Golf Alpine, qui a vu le jour en 1910, est situé entre les villages de Sainte-Adèle et de Sainte-Marguerite. 
-              Un trajet d’à peine 60 kilomètres. soit 45 minutes, de Montréal (sortie 69 de l’autoroute 15). 
-              Le parcours, à normale 36, s’étend sur un site enchanteur. Facile à marcher, il nécessite néanmoins de la précision, 
-              un défi pour les golfeurs ! Le chalet offre une vue pittoresque sur le golf… 
-              
-              Venez profiter de notre légendaire hospitalité dans un décor chaleureux et confortable!</p>
+              Le Club de Golf Alpine, qui a vu le jour en 1910, est situé entre les villages de Sainte-Adèle et de Sainte-Marguerite. Un trajet d’à peine 60
+              kilomètres. soit 45 minutes, de Montréal (sortie 69 de l’autoroute 15). Le parcours, à normale 36, s’étend sur un site enchanteur. Facile à
+              marcher, il nécessite néanmoins de la précision, un défi pour les golfeurs ! Le chalet offre une vue pittoresque sur le golf… Venez profiter de
+              notre légendaire hospitalité dans un décor chaleureux et confortable!
+            </p>
           </StyledBody>
         </StyledCardFrame>
       </div>
     </>
-  )
-}
+  );
+};
 const StyledOpen = styled.h1`
   padding-left: 1vw;
 `;
@@ -73,10 +68,10 @@ const StyledCard = styled.div`
   }
   float: left;
   margin: 0.5vw;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   &:hover {
-    border: 2px solid #34773A;
-    background: linear-gradient(139.73deg, #C4E9C2 0%, #72B46F 100%);
+    border: 2px solid #34773a;
+    background: linear-gradient(139.73deg, #c4e9c2 0%, #72b46f 100%);
   }
   border-radius: 10px;
   color: #000000;
@@ -105,4 +100,4 @@ const StyledBody = styled.div`
   }
 `;
 
-export default Accueil
+export default Accueil;

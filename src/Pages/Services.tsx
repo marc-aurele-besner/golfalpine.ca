@@ -1,15 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import styled from 'styled-components';
+import { Helmet } from 'react-helmet-async';
 
 const GolfBall = () => {
   return (
     <GolfBallContainer>
       <Svg viewBox="0 0 512 512" width="24" height="24">
-        <path
-          d="M256 512c141.385 0 256-114.615 256-256S397.385 0 256 0 0 114.615 0 256s114.615 256 256 256z"
-          fill="#F9F5F8"
-        />
+        <path d="M256 512c141.385 0 256-114.615 256-256S397.385 0 256 0 0 114.615 0 256s114.615 256 256 256z" fill="#F9F5F8" />
         <path
           d="M256 298.667c14.139 0 25.6-11.461 25.6-25.6 0-14.138-11.461-25.6-25.6-25.6-14.138 0-25.6 11.462-25.6 25.6 0 14.139 11.462 25.6 25.6 25.6zM346.042 298.667c14.139 0 25.6-11.461 25.6-25.6 0-14.138-11.461-25.6-25.6-25.6-14.138 0-25.6 11.462-25.6 25.6 0 14.139 11.462 25.6 25.6 25.6zM436.111 298.667c14.138 0 25.6-11.461 25.6-25.6 0-14.138-11.462-25.6-25.6-25.6-14.139 0-25.6 11.462-25.6 25.6 0 14.139 11.461 25.6 25.6 25.6zM165.958 298.667c14.139 0 25.6-11.461 25.6-25.6 0-14.138-11.461-25.6-25.6-25.6-14.138 0-25.6 11.462-25.6 25.6 0 14.139 11.462 25.6 25.6 25.6zM75.89 298.667c14.138 0 25.599-11.461 25.599-25.6 0-14.138-11.462-25.6-25.6-25.6-14.138 0-25.6 11.462-25.6 25.6 0 14.139 11.462 25.6 25.6 25.6zM306.577 373.333c14.138 0 25.6-11.461 25.6-25.6 0-14.138-11.462-25.6-25.6-25.6-14.139 0-25.6 11.462-25.6 25.6 0 14.139 11.461 25.6 25.6 25.6zM396.644 373.333c14.138 0 25.6-11.461 25.6-25.6 0-14.138-11.462-25.6-25.6-25.6-14.139 0-25.6 11.462-25.6 25.6 0 14.139 11.461 25.6 25.6 25.6zM205.424 373.333c14.139 0 25.6-11.461 25.6-25.6 0-14.138-11.461-25.6-25.6-25.6-14.138 0-25.6 11.462-25.6 25.6 0 14.139 11.462 25.6 25.6 25.6zM115.356 373.333c14.138 0 25.6-11.461 25.6-25.6 0-14.138-11.462-25.6-25.6-25.6-14.139 0-25.6 11.462-25.6 25.6 0 14.139 11.461 25.6 25.6 25.6zM357.177 448c14.139 0 25.6-11.461 25.6-25.6 0-14.138-11.461-25.6-25.6-25.6-14.138 0-25.6 11.462-25.6 25.6 0 14.139 11.462 25.6 25.6 25.6zM256 448c14.139 0 25.6-11.461 25.6-25.6 0-14.138-11.461-25.6-25.6-25.6-14.138 0-25.6 11.462-25.6 25.6 0 14.139 11.462 25.6 25.6 25.6zM154.824 448c14.138 0 25.6-11.461 25.6-25.6 0-14.138-11.462-25.6-25.6-25.6-14.139 0-25.6 11.462-25.6 25.6 0 14.139 11.461 25.6 25.6 25.6z"
           fill="#E3DFE2"
@@ -20,8 +17,8 @@ const GolfBall = () => {
         />
       </Svg>
     </GolfBallContainer>
-  )
-}
+  );
+};
 
 const Services: React.FC = () => {
   return (
@@ -29,60 +26,68 @@ const Services: React.FC = () => {
       <Helmet>
         <title>Golf Alpine - Les services</title>
       </Helmet>
-      <div className="container" id='about'>
+      <div className="container" id="about">
         <StyledCard>
-        <h2>
-          Les services
-        </h2>
-        <Table>
-          <tbody>
-            <tr>
-              <td>
-                <GolfBall />
-                Passe de saison</td>
-              <td>
-                <GolfBall />
-                Boutique de golf</td>
-            </tr>
-            <tr>
-              <td>
-                <GolfBall />
-                Livrets de parties</td>
-              <td>
-                <GolfBall />
-                Organisation de tournoi</td>
-            </tr>
-            <tr>
-              <td>
-                <GolfBall />
-                Cartes Cadeaux</td>
-              <td>
-                <GolfBall />
-                Vert de pratique</td>
-            </tr>
-            <tr>
-              <td>
-                <GolfBall />
-                Voiturette électrique</td>
-              <td>
-                <GolfBall />
-                Voiturettes à main</td>
-            </tr>
-            <tr>
-              <td>
-                <GolfBall />
-                Leçons de golf par un professionnel</td>
-              <td>
-                <GolfBall />
-                Magnifique terrasse</td>
-            </tr>
-          </tbody>
-        </Table>
+          <h2>Les services</h2>
+          <Table>
+            <tbody>
+              <tr>
+                <td>
+                  <GolfBall />
+                  Passe de saison
+                </td>
+                <td>
+                  <GolfBall />
+                  Boutique de golf
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <GolfBall />
+                  Livrets de parties
+                </td>
+                <td>
+                  <GolfBall />
+                  Organisation de tournoi
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <GolfBall />
+                  Cartes Cadeaux
+                </td>
+                <td>
+                  <GolfBall />
+                  Vert de pratique
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <GolfBall />
+                  Voiturette électrique
+                </td>
+                <td>
+                  <GolfBall />
+                  Voiturettes à main
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <GolfBall />
+                  Leçons de golf par un professionnel
+                </td>
+                <td>
+                  <GolfBall />
+                  Magnifique terrasse
+                </td>
+              </tr>
+            </tbody>
+          </Table>
         </StyledCard>
       </div>
     </>
-  )
-}
+  );
+};
 
 const StyledCard = styled.div`
   border: 2px;
@@ -115,16 +120,16 @@ const Table = styled.table`
 
   th,
   td {
-    color: #34773A;
+    color: #34773a;
     padding: 3vh;
     &:hover {
-      background: linear-gradient(139.73deg, #C4E9C2 0%, #72B46F 100%);
+      background: linear-gradient(139.73deg, #c4e9c2 0%, #72b46f 100%);
       border-radius: 10px;
     }
   }
 
   th {
-    color: #34773A;
+    color: #34773a;
     font-size: 3vh;
     text-transform: uppercase;
   }
@@ -136,4 +141,4 @@ const Table = styled.table`
   }
 `;
 
-export default Services
+export default Services;
