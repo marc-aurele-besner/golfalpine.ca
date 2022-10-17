@@ -134,10 +134,6 @@ const Accueil: React.FC = () => {
           <GolfSvg />
           <b>Reservation</b>
         </h3>
-        <Box>
-          Dernière semaine de jeu: Fermé Mardi, Mercredi et Jeudi (11 au 13 Octobre 2022), Ouvert Vendredi, Samedi et Dimanche (14 au 16 Octobre 2022) (Selon la
-          température)
-        </Box>
         {send && (
           <Box>
             <h3>Nous avons envoyé votre demande de réservation!</h3>

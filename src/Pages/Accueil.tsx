@@ -12,9 +12,9 @@ const Accueil: React.FC = () => {
       </Helmet>
       <Video />
       <div className="container">
-        <Reservation />
+        {/* <Reservation /> */}
         <StyledCardFrame>
-          <StyledOpen>Ouverture du Club de Golf Alpine Vendredi le 6 mai 2022!</StyledOpen>
+          <StyledOpen>Merci pour la saison 2022!</StyledOpen>
           <StyledCard>
             <img src="/img/AfficheGolfeurResponsable_small.png" alt="COVID-19" width="100%" />
             <h3>COVID-19</h3>
