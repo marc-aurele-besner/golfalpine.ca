@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet-async';
 import Video from '../Components/Video';
-import Reservation from '../Components/Reservation';
+// import Reservation from '../Components/Reservation';
 
 const Accueil: React.FC = () => {
   return (
