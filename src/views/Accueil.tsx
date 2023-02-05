@@ -13,16 +13,20 @@ const Accueil: React.FC = () => {
         <StyledCardFrame>
           <StyledOpen>Merci pour la saison 2022!</StyledOpen>
           <StyledCard>
-            <Image src='/img/AfficheGolfeurResponsable_small.png' alt='COVID-19' fill={true} />
-            <h3>COVID-19</h3>
+            <StyledImage>
+              <Image src='/img/thumb_3.png' alt='COVID-19' fill={true} />
+            </StyledImage>
+            <h3>Tarifs et Livret de parties</h3>
             <p>
-              Avant de venir jouer, nous vous demandons de consulter les consignes pour les golfeurs relatif au Corona
-              Virus.
+              Consultez nos tarifs attractifs et profitez de l&apos;occasion d&apos;économiser en achetant notre livret
+              de 10 parties à un tarif avantageux.
             </p>
-            <Link href='/covid'>Agrandir</Link>
+            <Link href='/tarifs'>Consulter les tarifs</Link>
           </StyledCard>
           <StyledCard>
-            <Image src='/img/thumb_2.png' alt='Visite Virtuelle9' fill={true} />
+            <StyledImage>
+              <Image src='/img/thumb_2.png' alt='Visite Virtuelle9' fill={true} />
+            </StyledImage>
             <h3>Visite Virtuelle</h3>
             <p>Visiter notre club de Golf centenaire avec la technologie d’aujourd’hui.</p>
             <Link href='https://goo.gl/maps/Z8TL2' target='_blank'>
@@ -30,7 +34,9 @@ const Accueil: React.FC = () => {
             </Link>
           </StyledCard>
           <StyledCard>
-            <Image src='/img/thumb_history.jpg' alt='Histoire (1910 à 2020)' fill={true} />
+            <StyledImage>
+              <Image src='/img/thumb_history.jpg' alt='Histoire (1910 à 2020)' fill={true} />
+            </StyledImage>
             <h3>Histoire (1910 à 2020)</h3>
             <p>
               Depuis le tout début du siècle dernier, le golf Alpine fait figure de véritable institution à Saint-Adèle.
@@ -63,9 +69,16 @@ const StyledCardFrame = styled.div`
   position: relative;
 `
 
+const StyledImage = styled.div`
+  width: 100%;
+  height: 35vh;
+  position: relative;
+`
+
 const StyledCard = styled.div`
   border: 2px;
   width: 30%;
+  height: 55vh;
   @media only screen and (max-width: 600px) {
     width: 100%;
   }
