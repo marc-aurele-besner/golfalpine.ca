@@ -3,11 +3,23 @@
 /.pnp
 .pnp.js
 
+# TypeScript cache
+*.tsbuildinfo
+
 # testing
 /coverage
 
-# production
-/build
+# Optional eslint cache
+.eslintcache
+
+# Yarn Error file
+yarn-error.log
+
+# Next.js build output
+.next
+out
+public/sw.js
+public/workbox-*
 
 # misc
 .DS_Store
@@ -19,3 +31,19 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Local Netlify folder
+.netlify
+
+# Static Storybook
+storybook-static
+
+# Work in progress
+.wip
