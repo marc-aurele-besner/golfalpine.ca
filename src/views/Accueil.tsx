@@ -14,7 +14,14 @@ const Accueil: React.FC = () => {
           <StyledOpen>Merci pour la saison 2022!</StyledOpen>
           <StyledCard>
             <StyledImage>
-              <Image src='/img/thumb_3.png' alt='COVID-19' fill={true} />
+              <Image
+                src='/img/thumb_3.png'
+                alt='COVID-19'
+                fill={true}
+                sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
+              />
             </StyledImage>
             <h3>Tarifs et Livret de parties</h3>
             <p>
@@ -25,7 +32,14 @@ const Accueil: React.FC = () => {
           </StyledCard>
           <StyledCard>
             <StyledImage>
-              <Image src='/img/thumb_2.png' alt='Visite Virtuelle9' fill={true} />
+              <Image
+                src='/img/thumb_2.png'
+                alt='Visite Virtuelle9'
+                fill={true}
+                sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
+              />
             </StyledImage>
             <h3>Visite Virtuelle</h3>
             <p>Visiter notre club de Golf centenaire avec la technologie d’aujourd’hui.</p>
@@ -35,7 +49,14 @@ const Accueil: React.FC = () => {
           </StyledCard>
           <StyledCard>
             <StyledImage>
-              <Image src='/img/thumb_history.jpg' alt='Histoire (1910 à 2020)' fill={true} />
+              <Image
+                src='/img/thumb_history.jpg'
+                alt='Histoire (1910 à 2020)'
+                fill={true}
+                sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
+              />
             </StyledImage>
             <h3>Histoire (1910 à 2020)</h3>
             <p>
