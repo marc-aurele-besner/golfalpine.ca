@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet-async';
 import Video from '../Components/Video';
-// import Reservation from '../Components/Reservation';
+import Reservation from '../Components/Reservation';
 
 const Accueil: React.FC = () => {
   return (
@@ -12,14 +12,16 @@ const Accueil: React.FC = () => {
       </Helmet>
       <Video />
       <div className="container">
-        {/* <Reservation /> */}
+        <Reservation />
         <StyledCardFrame>
           <StyledOpen>Merci pour la saison 2022!</StyledOpen>
           <StyledCard>
-            <img src="/img/AfficheGolfeurResponsable_small.png" alt="COVID-19" width="100%" />
-            <h3>COVID-19</h3>
-            <p>Avant de venir jouer, nous vous demandons de consulter les consignes pour les golfeurs relatif au Corona Virus.</p>
-            <Link href="/covid">Agrandir</Link>
+            <img src="/img/thumb_3.png" alt="COVID-19" width="100%" />
+            <h3>Tarifs et Livret de parties</h3>
+            <p>
+              Consultez nos tarifs attractifs et profitez de l&apos;occasion d&apos;économiser en achetant notre livret de 10 parties à un tarif avantageux.
+            </p>
+            <Link href="/tarifs">Consulter les tarifs</Link>
           </StyledCard>
           <StyledCard>
             <img src="/img/thumb_2.png" alt="Visite Virtuelle9" width="100%" />
