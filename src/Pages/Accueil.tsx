@@ -14,7 +14,7 @@ const Accueil: React.FC = () => {
       <div className="container">
         <Reservation />
         <StyledCardFrame>
-          <StyledOpen>Merci pour la saison 2022!</StyledOpen>
+          <StyledOpen>Ouverture du Club de Golf Alpine Vendredi le 5 mai 2023!</StyledOpen>
           <StyledCard>
             <img src="/img/thumb_3.png" alt="COVID-19" width="100%" />
             <h3>Tarifs et Livret de parties</h3>
