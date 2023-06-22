@@ -68,7 +68,7 @@ const Tarifs: React.FC = () => {
                         <br />
                         Avant 8 heures
                       </TdDescription>
-                      <Td9Trous>$ 22.00</Td9Trous>
+                      <Td9Trous>$ 24.00</Td9Trous>
                       <Td18Trous> N/A</Td18Trous>
                     </tr>
                   </tbody>
