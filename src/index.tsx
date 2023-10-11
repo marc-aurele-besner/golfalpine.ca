@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 // import Navigation from './Components/Navigation';
-import Footer from './Components/Footer';
+// import Footer from './Components/Footer';
 import Accueil from './Pages/Accueil';
 import './styles.css';
 
