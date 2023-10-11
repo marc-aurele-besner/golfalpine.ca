@@ -1,16 +1,27 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+// import styled from 'styled-components';
 import { Helmet } from 'react-helmet-async';
-import Video from '../Components/Video';
-import Reservation from '../Components/Reservation';
+// import Video from '../Components/Video';
+import { Document, Page, pdfjs } from 'react-pdf';
+// import Reservation from '../Components/Reservation';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Accueil: React.FC = () => {
+  const [numPages, setNumPages] = useState<number>();
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
+    setNumPages(numPages);
+  }
   return (
     <>
       <Helmet>
         <title>Golf Alpine - Accueil</title>
       </Helmet>
-      <Video />
+
+      <Document file="fermeture2033.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+        <Page pageNumber={numPages} renderTextLayer={false} renderMode="canvas" scale={1} />
+      </Document>
+      {/* <Video />
       <div className="container">
         <Reservation />
         <StyledCardFrame>
@@ -46,60 +57,60 @@ const Accueil: React.FC = () => {
             </p>
           </StyledBody>
         </StyledCardFrame>
-      </div>
+      </div> */}
     </>
   );
 };
-const StyledOpen = styled.h1`
-  padding-left: 1vw;
-`;
+// const StyledOpen = styled.h1`
+//   padding-left: 1vw;
+// `;
 
-const StyledCardFrame = styled.div`
-  padding: 0.5vw;
-  height: 500px;
-  width: 100%;
-  float: center;
-  position: relative;
-`;
+// const StyledCardFrame = styled.div`
+//   padding: 0.5vw;
+//   height: 500px;
+//   width: 100%;
+//   float: center;
+//   position: relative;
+// `;
 
-const StyledCard = styled.div`
-  border: 2px;
-  width: 30%;
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-  }
-  float: left;
-  margin: 0.5vw;
-  border: 2px solid #ffffff;
-  &:hover {
-    border: 2px solid #34773a;
-    background: linear-gradient(139.73deg, #c4e9c2 0%, #72b46f 100%);
-  }
-  border-radius: 10px;
-  color: #000000;
-  padding: 0.5vw;
-  overflow: hidden;
-  position: relative;
-`;
+// const StyledCard = styled.div`
+//   border: 2px;
+//   width: 30%;
+//   @media only screen and (max-width: 600px) {
+//     width: 100%;
+//   }
+//   float: left;
+//   margin: 0.5vw;
+//   border: 2px solid #ffffff;
+//   &:hover {
+//     border: 2px solid #34773a;
+//     background: linear-gradient(139.73deg, #c4e9c2 0%, #72b46f 100%);
+//   }
+//   border-radius: 10px;
+//   color: #000000;
+//   padding: 0.5vw;
+//   overflow: hidden;
+//   position: relative;
+// `;
 
-const Link = styled.a`
-  color: red;
-  hover: green;
-`;
+// const Link = styled.a`
+//   color: red;
+//   hover: green;
+// `;
 
-const StyledBody = styled.div`
-  border: 2px;
-  width: 90%;
-  height: 60vh;
-  margin: 0.5vw;
-  border-radius: 10px;
-  color: #000000;
-  padding-top: 6vh;
-  position: relative;
-  float: left;
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-  }
-`;
+// const StyledBody = styled.div`
+//   border: 2px;
+//   width: 90%;
+//   height: 60vh;
+//   margin: 0.5vw;
+//   border-radius: 10px;
+//   color: #000000;
+//   padding-top: 6vh;
+//   position: relative;
+//   float: left;
+//   @media only screen and (max-width: 600px) {
+//     width: 100%;
+//   }
+// `;
 
 export default Accueil;
