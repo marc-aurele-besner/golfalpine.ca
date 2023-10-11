@@ -38,7 +38,7 @@ const App = () => {
         </BrowserRouter>
       </HelmetProvider>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
