@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 const Video: React.FC = () => {
   return (
     <ReactPlayer
-      url="/vid/GolfAlpine.mp4"
+      src="/vid/GolfAlpine.mp4"
       muted={true}
       playsInline={true}
       preload="auto"
