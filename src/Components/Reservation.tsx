@@ -124,8 +124,10 @@ const Accueil: React.FC = () => {
     );
   };
 
-  const handleDateChange = (key: string) => (value: Date) => {
-    updateValue(key, value);
+  const handleDateChange = (key: string) => (value: Date | null) => {
+    if (value) {
+      updateValue(key, value);
+    }
   };
   return (
     <>
