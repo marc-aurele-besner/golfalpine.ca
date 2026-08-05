@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import ReactDatePicker, { registerLocale } from 'react-datepicker';
-import fr from 'date-fns/locale/fr';
+import { fr } from 'date-fns/locale/fr';
 import { getFormErrors } from './helpers';
 
 import 'react-datepicker/dist/react-datepicker.css';

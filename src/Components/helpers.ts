@@ -1,4 +1,6 @@
-import { format, parseISO, isValid } from 'date-fns';
+import { format } from 'date-fns/format';
+import { parseISO } from 'date-fns/parseISO';
+import { isValid } from 'date-fns/isValid';
 import { FormState } from './Reservation';
 import { ContactFormState } from './NousEcrire';
 
