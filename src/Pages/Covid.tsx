@@ -27,7 +27,7 @@ const StyledCard = styled.div`
   position: relative;
 `;
 
-const StyledImages = styled.img`
+const StyledImages = styled.img<{ src: string; alt: string }>`
   left: 0;
   top: 0;
   height: 100%;

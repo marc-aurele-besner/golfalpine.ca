@@ -121,13 +121,13 @@ const NousEcrire: React.FC = () => {
   );
 };
 
-const Box = styled.div`
+const Box = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   padding-bottom: 2px;
   float: left;
   width: 100%;
 `;
 
-const BaseLabel = styled.label`
+const BaseLabel = styled.label<React.LabelHTMLAttributes<HTMLLabelElement>>`
   color: #34773a;
   display: block;
   font-size: 16px;
@@ -135,12 +135,12 @@ const BaseLabel = styled.label`
   margin-bottom: 8px;
 `;
 
-const CenterStyled = styled.div`
+const CenterStyled = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   align-items: center;
   text-align: center;
 `;
 
-const Input = styled.input`
+const Input = styled.input<React.InputHTMLAttributes<HTMLInputElement>>`
   background-color: #ffffff;
   border: 0;
   border-radius: 16px;
@@ -170,7 +170,7 @@ const Input = styled.input`
   }
 `;
 
-const Textarea = styled.textarea`
+const Textarea = styled.textarea<React.TextareaHTMLAttributes<HTMLTextAreaElement>>`
   background-color: #ffffff;
   border: 0;
   border-radius: 16px;
@@ -200,7 +200,7 @@ const Textarea = styled.textarea`
   }
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<React.ButtonHTMLAttributes<HTMLButtonElement>>`
   align-items: center;
   border: 1;
   margin-top: 2vh;
@@ -231,7 +231,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const Errors = styled.div`
+const Errors = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   color: #dc0d00;
   font-size: 16px;
   font-weight: 400;

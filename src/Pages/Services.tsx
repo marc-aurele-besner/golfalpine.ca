@@ -89,7 +89,7 @@ const Services: React.FC = () => {
   );
 };
 
-const StyledCard = styled.div`
+const StyledCard = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px;
   width: 90%;
   float: center;
@@ -104,17 +104,17 @@ const StyledCard = styled.div`
   position: relative;
 `;
 
-const GolfBallContainer = styled.span`
+const GolfBallContainer = styled.span<React.HTMLAttributes<HTMLSpanElement>>`
   padding-right: 0.5vw;
   position: relative;
 `;
 
-const Svg = styled.svg`
+const Svg = styled.svg<React.SVGAttributes<SVGElement>>`
   align-self: center;
   flex-shrink: 0;
 `;
 
-const Table = styled.table`
+const Table = styled.table<React.TableHTMLAttributes<HTMLTableElement>>`
   max-width: 100%;
   width: 100%;
 

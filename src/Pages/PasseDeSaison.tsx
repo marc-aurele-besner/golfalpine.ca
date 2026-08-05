@@ -95,7 +95,7 @@ const PasseDeSaison: React.FC = () => {
   );
 };
 
-const StyledCard = styled.div`
+const StyledCard = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px;
   width: 90%;
   float: center;
@@ -109,7 +109,7 @@ const StyledCard = styled.div`
   position: relative;
 `;
 
-const StyledPassesType = styled.div`
+const StyledPassesType = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px;
   width: 98%;
   float: center;
@@ -126,7 +126,7 @@ const StyledPassesType = styled.div`
   }
 `;
 
-const Limit = styled.div`
+const Limit = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   background-color: #34773a;
   float: right;
   border-radius: 10px;
@@ -152,7 +152,7 @@ const Limit = styled.div`
   }
 `;
 
-const Table = styled.table`
+const Table = styled.table<React.TableHTMLAttributes<HTMLTableElement>>`
   max-width: 100%;
   width: 100%;
   margin: 0.5vw;
@@ -176,32 +176,32 @@ const Table = styled.table`
   }
 `;
 
-const ThDescription = styled.th`
+const ThDescription = styled.th<React.ThHTMLAttributes<HTMLTableCellElement>>`
   max-width: 60%;
   width: 60%;
 `;
 
-const Th1Personne = styled.th`
+const Th1Personne = styled.th<React.ThHTMLAttributes<HTMLTableCellElement>>`
   max-width: 20%;
   width: 20%;
 `;
 
-const ThCouple = styled.th`
+const ThCouple = styled.th<React.ThHTMLAttributes<HTMLTableCellElement>>`
   max-width: 20%;
   width: 20%;
 `;
 
-const TdDescription = styled.td`
+const TdDescription = styled.td<React.TdHTMLAttributes<HTMLTableCellElement>>`
   max-width: 60%;
   width: 60%;
 `;
 
-const Td1Personne = styled.td`
+const Td1Personne = styled.td<React.TdHTMLAttributes<HTMLTableCellElement>>`
   max-width: 20%;
   width: 20%;
 `;
 
-const TdCouple = styled.td`
+const TdCouple = styled.td<React.TdHTMLAttributes<HTMLTableCellElement>>`
   max-width: 20%;
   width: 20%;
 `;

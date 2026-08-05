@@ -168,7 +168,7 @@ const Parcours: React.FC = () => {
   );
 };
 
-const StyledParcours = styled.div`
+const StyledParcours = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px;
   width: 90%;
   float: center;
@@ -183,7 +183,7 @@ const StyledParcours = styled.div`
   position: relative;
 `;
 
-const StyledCard = styled.div`
+const StyledCard = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px;
   width: 30%;
   @media only screen and (max-width: 600px) {
@@ -204,7 +204,7 @@ const StyledCard = styled.div`
   }
 `;
 
-const Bleu = styled.div`
+const Bleu = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   background-color: #213ea6;
   float: right;
   border-radius: 10px;
@@ -216,7 +216,7 @@ const Bleu = styled.div`
   line-height: 1.5;
 `;
 
-const Blanc = styled.div`
+const Blanc = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   background-color: #ffffff;
   float: right;
   border-radius: 10px;
@@ -229,7 +229,7 @@ const Blanc = styled.div`
   line-height: 1.5;
 `;
 
-const Or = styled.div`
+const Or = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   background-color: #e59d11;
   float: right;
   border-radius: 10px;
@@ -241,7 +241,7 @@ const Or = styled.div`
   line-height: 1.5;
 `;
 
-const Rouge = styled.div`
+const Rouge = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   background-color: #dc0d00;
   float: right;
   border-radius: 10px;
@@ -253,7 +253,7 @@ const Rouge = styled.div`
   line-height: 1.5;
 `;
 
-const Table = styled.table`
+const Table = styled.table<React.TableHTMLAttributes<HTMLTableElement>>`
   max-width: 100%;
   width: 100%;
   margin-right: 1vw;
@@ -281,17 +281,17 @@ const Table = styled.table`
   }
 `;
 
-const StyledBox = styled.div`
+const StyledBox = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   width: 100%;
 `;
 
-const StyledBoxContent = styled.div`
+const StyledBoxContent = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   width: 50%;
   float: left;
   position: relative;
 `;
 
-const StyledNormal = styled.div`
+const StyledNormal = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   color: #e2e2e2;
   float: right;
   font-size: 14px;
@@ -302,7 +302,7 @@ const StyledNormal = styled.div`
   position: relative;
 `;
 
-const StyledImages = styled.img`
+const StyledImages = styled.img<{ src: string; alt: string; height?: string }>`
   left: 0;
   top: 0;
   height: 100%;

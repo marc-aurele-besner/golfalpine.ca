@@ -242,7 +242,7 @@ const Accueil: React.FC = () => {
   );
 };
 
-const StyledReservationCard = styled.div`
+const StyledReservationCard = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px;
   width: 90%;
   float: center;
@@ -257,7 +257,7 @@ const StyledReservationCard = styled.div`
   position: relative;
 `;
 
-const BaseLabel = styled.label`
+const BaseLabel = styled.label<React.LabelHTMLAttributes<HTMLLabelElement>>`
   color: #1c4b21;
   display: block;
   font-size: 16px;
@@ -265,40 +265,40 @@ const BaseLabel = styled.label`
   margin-bottom: 8px;
 `;
 
-const CenterStyled = styled.div`
+const CenterStyled = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   align-items: center;
   text-align: center;
 `;
 
-const TypeStyled = styled.div`
+const TypeStyled = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   margin-bottom: 8px;
   display: block;
 `;
 
-const RadioTextStyled = styled.div`
+const RadioTextStyled = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   color: #1c4b21;
   float: left;
   padding: 5px;
   vertical-align: middle;
 `;
 
-const Box = styled.div`
+const Box = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   padding-bottom: 2px;
   float: left;
   width: 100%;
 `;
 
-const GolfSvgContainer = styled.span`
+const GolfSvgContainer = styled.span<React.HTMLAttributes<HTMLSpanElement>>`
   padding-right: 0.5vw;
   position: relative;
 `;
 
-const Svg = styled.svg`
+const Svg = styled.svg<React.SVGAttributes<SVGElement>>`
   align-self: center;
   flex-shrink: 0;
 `;
 
-const Input = styled.input`
+const Input = styled.input<React.InputHTMLAttributes<HTMLInputElement>>`
   background-color: #ffffff;
   border: 0;
   border-radius: 16px;
@@ -328,7 +328,7 @@ const Input = styled.input`
   }
 `;
 
-const Radio = styled.input.attrs({ type: 'radio' })`
+const Radio = styled.input.attrs({ type: 'radio' })<React.InputHTMLAttributes<HTMLInputElement>>`
   appearance: none;
   overflow: hidden;
   cursor: pointer;
@@ -376,7 +376,7 @@ const Radio = styled.input.attrs({ type: 'radio' })`
   }
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<React.ButtonHTMLAttributes<HTMLButtonElement>>`
   align-items: center;
   border: 1;
   margin-top: 2vh;
@@ -407,7 +407,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const Errors = styled.div`
+const Errors = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   color: #dc0d00;
   font-size: 16px;
   font-weight: 400;
