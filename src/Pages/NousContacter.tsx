@@ -69,7 +69,7 @@ const NousContacter: React.FC = () => {
   );
 };
 
-const StyledContact = styled.div`
+const StyledContact = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px;
   width: 90%;
   float: center;
@@ -85,7 +85,7 @@ const StyledContact = styled.div`
   position: relative;
 `;
 
-const StyledCard = styled.div`
+const StyledCard = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px;
   width: 45%;
   @media only screen and (max-width: 600px) {
@@ -104,7 +104,7 @@ const StyledCard = styled.div`
   position: relative;
 `;
 
-const Table = styled.table`
+const Table = styled.table<React.TableHTMLAttributes<HTMLTableElement>>`
   max-width: 100%;
   width: 100%;
 

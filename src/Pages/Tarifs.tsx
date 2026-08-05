@@ -198,7 +198,7 @@ const StyledBox = styled.div`
   width: 100%;
 `;
 
-const StyledCardTarifs = styled.div`
+const StyledCardTarifs = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   width: 70%;
   position: absolute;
   @media only screen and (max-width: 600px) {
@@ -210,7 +210,7 @@ const StyledCardTarifs = styled.div`
   padding: 0.5vw;
 `;
 
-const StyledCardLivret = styled.div`
+const StyledCardLivret = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   width: 25%;
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -222,7 +222,7 @@ const StyledCardLivret = styled.div`
   color: #000000;
 `;
 
-const StyledLabelLivret = styled.div`
+const StyledLabelLivret = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   width: 100%;
   margin-top: 0.5vw;
   padding-top: 1vw;
@@ -236,7 +236,7 @@ const StyledLabelLivret = styled.div`
   }
 `;
 
-const StyledImages = styled.img`
+const StyledImages = styled.img<{ src: string; alt: string }>`
   left: 0;
   top: 0;
   height: 100%;
@@ -250,7 +250,7 @@ const StyledImages = styled.img`
   }
 `;
 
-const Table = styled.table`
+const Table = styled.table<React.TableHTMLAttributes<HTMLTableElement>>`
   max-width: 100%;
   width: 100%;
 
@@ -274,22 +274,22 @@ const Table = styled.table`
   }
 `;
 
-const TdDescription = styled.td`
+const TdDescription = styled.td<React.TdHTMLAttributes<HTMLTableCellElement>>`
   max-width: 50%;
   width: 50%;
 `;
 
-const Td9Trous = styled.td`
+const Td9Trous = styled.td<React.TdHTMLAttributes<HTMLTableCellElement>>`
   max-width: 25%;
   width: 25%;
 `;
 
-const Td18Trous = styled.td`
+const Td18Trous = styled.td<React.TdHTMLAttributes<HTMLTableCellElement>>`
   max-width: 25%;
   width: 25%;
 `;
 
-const TableLivret = styled.table`
+const TableLivret = styled.table<React.TableHTMLAttributes<HTMLTableElement>>`
   max-width: 100%;
   width: 100%;
 
@@ -312,12 +312,12 @@ const TableLivret = styled.table`
   }
 `;
 
-const ThLivret = styled.th`
+const ThLivret = styled.th<React.ThHTMLAttributes<HTMLTableCellElement>>`
   max-width: 50%;
   width: 50%;
 `;
 
-const TdLivret = styled.td`
+const TdLivret = styled.td<React.TdHTMLAttributes<HTMLTableCellElement>>`
   max-width: 50%;
   width: 50%;
 `;

@@ -12,7 +12,7 @@ const Page404: React.FC = () => {
   );
 };
 
-const StyledPage404 = styled.div`
+const StyledPage404 = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   border: 2px;
   width: 90%;
   float: center;

@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
   );
 };
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   width: 100%;
   float: center;
   text-align: left;
@@ -31,13 +31,13 @@ const StyledFooter = styled.div`
   position: bottom;
 `;
 
-const StyledTextFooter = styled.div`
+const StyledTextFooter = styled.div<React.HTMLAttributes<HTMLDivElement>>`
   width: 100%;
   padding-left: 8vw;
   position: relative;
 `;
 
-const StyledImgFooter = styled.img`
+const StyledImgFooter = styled.img<{ src: string; alt: string }>`
   width: 180px;
   float: left;
   text-align: left;
