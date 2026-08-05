@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 // import Navigation from './Components/Navigation';
@@ -43,9 +43,12 @@ const App = () => {
   );
 };
 
-ReactDOM.render(
-  <Suspense fallback={null}>
-    <App />
-  </Suspense>,
-  document.getElementById('root')
-);
+const container = document.getElementById('root');
+if (container) {
+  const root = createRoot(container);
+  root.render(
+    <Suspense fallback={null}>
+      <App />
+    </Suspense>
+  );
+}
