@@ -3,7 +3,10 @@
   "extends": [
     "config:base"
   ],
-  "constraints": {
-    "typescript": "<=4.9.5"
-  }
+  "packageRules": [
+    {
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<=4.9.5"
+    }
+  ]
 }
