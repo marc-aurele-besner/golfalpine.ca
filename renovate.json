@@ -5,8 +5,11 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["typescript"],
+      "matchPackageNames": [
+        "typescript"
+      ],
       "allowedVersions": "<=4.9.5"
     }
-  ]
+  ],
+  "minimumReleaseAge": "1 day"
 }
