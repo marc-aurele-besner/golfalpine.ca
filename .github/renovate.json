@@ -6,13 +6,18 @@
   "packageRules": [
     {
       "description": "@uniswap/token-lists 1.0.0-beta.35 was published with a broken tarball (no dist/ directory in the published package). Pin to beta.34 until upstream republishes.",
-      "matchPackageNames": ["@uniswap/token-lists"],
+      "matchPackageNames": [
+        "@uniswap/token-lists"
+      ],
       "allowedVersions": "<=1.0.0-beta.34"
     },
     {
       "description": "react-scripts 5.0.1 ships resolve@1.x which cannot resolve TypeScript 7's exports-only ESM package.json, so the build crashes with MODULE_NOT_FOUND before Webpack starts. Pin to the 4.9.x range until react-scripts is replaced.",
-      "matchPackageNames": ["typescript"],
+      "matchPackageNames": [
+        "typescript"
+      ],
       "allowedVersions": "<=4.9.x"
     }
-  ]
+  ],
+  "minimumReleaseAge": "1 day"
 }
