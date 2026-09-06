@@ -17,6 +17,13 @@
         "typescript"
       ],
       "allowedVersions": "<=4.9.x"
+    },
+    {
+      "description": "eslint-config-react-app@7.0.1 (bundled by react-scripts 5.0.1) peer-requires eslint ^8.0.0. ESLint v9+ removed legacy eslintrc config loading, so 'extends: react-app' fails to resolve and the CRA build crashes. Pin to the 8.x range until react-scripts is replaced.",
+      "matchPackageNames": [
+        "eslint"
+      ],
+      "allowedVersions": "<=8.x"
     }
   ],
   "minimumReleaseAge": "1 day"
