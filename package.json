@@ -23,7 +23,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.0.0",
+    "@emailjs/browser": "^5.0.0",
     "@types/react-router-dom": "^5.3.3",
     "date-fns": "^4.0.0",
     "lodash": "^4.17.21",
