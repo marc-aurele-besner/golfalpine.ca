@@ -69,7 +69,7 @@
     "compression": ">=1.8.2",
     "brace-expansion": ">=1.1.20",
     "postcss-selector-parser": ">=7.1.6",
-    "js-yaml": "^4.0.0"
+    "js-yaml": "^5.0.0"
   },
   "workspaces": [
     "tools/braces-shim"
