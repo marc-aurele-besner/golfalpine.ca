@@ -1,5 +1,46 @@
 # Security notes
 
+## Open Dependabot alerts without an installable fix
+
+### `sprintf-js` — GHSA-hp3w-g68c-fv3c / CVE-2026-97058
+
+**Alert**: <https://github.com/marc-aurele-besner/golfalpine.ca/security/dependabot/205>
+**Severity**: medium (CVSS 5.3 — uncaught `RangeError` from `toFixed`/`toExponential`/`toPrecision` triggered by an out-of-range precision specifier; on the Node.js event loop the throw propagates to the default uncaught-exception policy and crashes the worker)
+**Vulnerable range**: `<= 1.1.3`
+**First patched version**: none — `sprintf-js@1.1.3` (published 2022-01-13) is still the latest release on npm. The upstream issue ([alexei/sprintf.js#237](https://github.com/alexei/sprintf.js/issues/237)) is open but no patched tag has been published.
+
+#### How `sprintf-js` enters this tree
+
+`sprintf-js@1.0.3` is a transitive dependency via a single chain:
+
+`react-scripts@5.0.1` → `babel-plugin-istanbul@6.1.1` → `@istanbuljs/load-nyc-config@1.1.0` → `argparse@1.0.10` → `sprintf-js@1.0.3`
+
+(`argparse@2.0.1` is also installed in the tree for `js-yaml` and friends; it does not depend on `sprintf-js`.)
+
+#### Exposure analysis
+
+The vulnerability requires an attacker-controlled *format string* to reach `sprintf()` (e.g. `%.101f`); data substituted as `%s` arguments is safe. The only consumer in this tree is `argparse@1.0.10`, which uses `sprintf` internally to format help text, error messages, and type descriptions. Every format string passed by `argparse` is hard-coded in the library itself; user input is passed as `%s` data via `util.format`-style substitution, never as the format string. The vulnerable code path is therefore **not reachable** from any runtime or build-time input this app accepts.
+
+Additional mitigation by reachability:
+
+- `babel-plugin-istanbul` is loaded by `react-scripts test` (Jest with coverage) and during babel transformations. It is not part of the bundle that ships to the browser, and no project code under `src/` or `public/` references `sprintf-js` directly (verified with `grep -rn "sprintf-js" src/ public/`).
+- The build does not invoke any `argparse` CLI in this repo; the dependency is only loaded transitively if a coverage run happens to call into `@istanbuljs/load-nyc-config`.
+
+#### Why this alert stays open
+
+- No patched `sprintf-js` version exists upstream, so there is no `overrides` range that would force a fix (every published version is `<= 1.1.3`).
+- `react-scripts@5.0.1` is end-of-life (CRA is no longer maintained), so we cannot bump the parent to a version that drops `@istanbuljs/load-nyc-config` or `argparse@1.x`.
+- The exposure in this project is zero (no attacker-controlled format string reaches `sprintf`), so a local shim is disproportionate at this severity and would risk breaking `argparse`'s help/error formatting if the shim's implementation drifts from upstream semantics.
+
+#### Action items when a fix becomes available
+
+1. When `sprintf-js` ships a patched release (>= the version tagged in [alexei/sprintf.js#237](https://github.com/alexei/sprintf.js/issues/237)), add `"sprintf-js": ">=[patched]"` to `overrides` in `package.json` and re-run `npm install`.
+2. Confirm `npm audit` no longer reports `GHSA-hp3w-g68c-fv3c`.
+3. Remove this section from `SECURITY.md`.
+4. If the upstream maintainer also rejects the report (as happened for `braces` — see below), escalate to a local shim along the same lines as `tools/braces-shim/`.
+
+Until then, treat this alert as "tracked, exposure assessed, mitigation not yet available" and do not dismiss it in the Dependabot UI without an explicit decision from the project owner.
+
 ## Mitigated Dependabot alerts without an upstream fix
 
 ### `braces` — GHSA-vfj7-8cjw-p6xm / CVE-2026-93687
