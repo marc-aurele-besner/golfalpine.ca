@@ -12,11 +12,11 @@
       "allowedVersions": "<=1.0.0-beta.34"
     },
     {
-      "description": "react-scripts 5.0.1 ships resolve@1.x which cannot resolve TypeScript 7's exports-only ESM package.json, so the build crashes with MODULE_NOT_FOUND before Webpack starts. Pin to the 4.9.x range until react-scripts is replaced.",
+      "description": "react-scripts 5.0.1 ships resolve@1.x which cannot resolve TypeScript 7's exports-only ESM package.json, so the build crashes with MODULE_NOT_FOUND before Webpack starts. TypeScript 5.x still ships a classic CommonJS package.json and builds fine with react-scripts 5.0.1, but @types/node v26 requires TypeScript >= 5.6. Allow the 5.x line, keep the pin until react-scripts is replaced.",
       "matchPackageNames": [
         "typescript"
       ],
-      "allowedVersions": "<=4.9.x"
+      "allowedVersions": "<=5.9.x"
     },
     {
       "description": "eslint-config-react-app@7.0.1 (bundled by react-scripts 5.0.1) peer-requires eslint ^8.0.0. ESLint v9+ removed legacy eslintrc config loading, so 'extends: react-app' fails to resolve and the CRA build crashes. Pin to the 8.x range until react-scripts is replaced.",
